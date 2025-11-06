@@ -34,3 +34,4 @@
 [11/5/2025, 2:20:00 PM] Commit #34: feat(backend): implement controller logic for upload - Compilation: SUCCESS, Tests: PASSED.
 [11/5/2025, 2:48:00 PM] Commit #35: feat(backend): implement controller logic for users - Compilation: SUCCESS, Tests: PASSED.
 [11/5/2025, 3:23:00 PM] Commit #36: feat(backend): define express routes for admin - Compilation: SUCCESS, Tests: PASSED.
+[11/6/2025, 9:00:00 AM] Commit #37: feat(backend): define express routes for api - Compilation: SUCCESS, Tests: PASSED.
