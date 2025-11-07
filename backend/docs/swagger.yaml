@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Tripify Enterprise API
+  version: 0.1.0
+paths:
+  /api/auth/register:
+    post:
+      summary: Register
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: OK
+  /api/planner:
+    post:
+      summary: Create trip plan
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Plan created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
