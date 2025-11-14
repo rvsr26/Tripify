@@ -1,0 +1,906 @@
+export const curatedPlans = [
+  {
+    id: 'paris-premium',
+    city: 'Paris',
+    title: 'The Parisian Elegance',
+    days: 4,
+    budget: 3500,
+    currency: '€',
+    location: { lat: 48.8566, lng: 2.3522, address: 'Paris, France' },
+    image: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=80',
+    description: 'Experience the magic of the City of Light with private tours of the Louvre, sunset river cruises, and Michelin-starred dining.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Classic Landmarks',
+          activities: [
+            { time: '09:00 AM', activity: 'Eiffel Tower Private Access', location: 'Champ de Mars', coordinates: { lat: 48.8584, lng: 2.2945 } },
+            { time: '12:30 PM', activity: 'Gourmet Lunch at Le Jules Verne', location: 'Eiffel Tower 2nd Floor', coordinates: { lat: 48.8584, lng: 2.2945 } },
+            { time: '03:00 PM', activity: 'Arc de Triomphe & Champs-Élysées Walk', location: 'Place Charles de Gaulle', coordinates: { lat: 48.8738, lng: 2.2950 } },
+            { time: '07:30 PM', activity: 'Seine River Dinner Cruise', location: 'Port de la Bourdonnais', coordinates: { lat: 48.8596, lng: 2.2924 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Art & History',
+          activities: [
+            { time: '10:00 AM', activity: 'Louvre Museum Guided Tour', location: 'Rue de Rivoli', coordinates: { lat: 48.8606, lng: 2.3376 } },
+            { time: '01:30 PM', activity: 'Lunch at Cafe Marly', location: 'Louvre Courtyard', coordinates: { lat: 48.8610, lng: 2.3359 } },
+            { time: '04:00 PM', activity: 'Tuileries Garden Stroll', location: 'Place de la Concorde', coordinates: { lat: 48.8635, lng: 2.3275 } },
+            { time: '08:00 PM', activity: 'Opéra Garnier Performance', location: 'Place de l’Opéra', coordinates: { lat: 48.8719, lng: 2.3316 } }
+          ]
+        },
+        {
+          day: 3,
+          theme: 'Montmartre & Hidden Gems',
+          activities: [
+            { time: '10:00 AM', activity: 'Sacre-Coeur Basilica Visit', location: 'Montmartre', coordinates: { lat: 48.8867, lng: 2.3431 } },
+            { time: '12:00 PM', activity: 'Artist Square Painting Experience', location: 'Place du Tertre', coordinates: { lat: 48.8865, lng: 2.3408 } },
+            { time: '03:00 PM', activity: 'Hidden Vineyard Tour', location: 'Clos Montmartre', coordinates: { lat: 48.8885, lng: 2.3395 } },
+            { time: '07:00 PM', activity: 'Cabaret Show at Moulin Rouge', location: 'Pigalle', coordinates: { lat: 48.8841, lng: 2.3323 } }
+          ]
+        },
+        {
+          day: 4,
+          theme: 'The Royal Treatment',
+          activities: [
+            { time: '09:00 AM', activity: 'Versailles Palace Full Day Trip', location: 'Versailles', coordinates: { lat: 48.8049, lng: 2.1204 } },
+            { time: '01:00 PM', activity: 'Gardens Picnic by the Canal', location: 'Versailles', coordinates: { lat: 48.8075, lng: 2.1105 } },
+            { time: '08:00 PM', activity: 'Farewell Dinner at Le Meurice', location: 'Tuileries', coordinates: { lat: 48.8651, lng: 2.3292 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'Apparel', icon: '👔', items: ['Formal Evening Wear', 'Comfortable Walking Shoes', 'Chic Outerwear', 'Cashmere Scarf'] },
+        { name: 'Essentials', icon: '🎫', items: ['Universal Adapter', 'Museum Pass', 'Euros (Cash)', 'French Phrasebook'] }
+      ]
+    },
+    reviews: [
+      { user: 'Clara S.', rating: 5, text: 'Simply breathtaking. The Eiffel Tower lunch was worth every penny!', avatar: 'C' },
+      { user: 'Julian M.', rating: 4, text: 'Great itinerary, but walking in Montmartre can be exhausting. Wear good shoes!', avatar: 'J' },
+      { user: 'Sarah T.', rating: 5, text: 'The Louvre guide was fantastic. Learned so much more than if exploring alone.', avatar: 'S' }
+    ]
+  },
+  {
+    id: 'tokyo-neon',
+    city: 'Tokyo',
+    title: 'Neon & Tradition',
+    days: 5,
+    budget: 4200,
+    currency: '¥',
+    location: { lat: 35.6762, lng: 139.6503, address: 'Tokyo, Japan' },
+    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80',
+    description: 'Navigate the high-tech streets of Shibuya and the ancient temples of Asakusa in this ultimate Tokyo urban adventure.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Modern Metropolis',
+          activities: [
+            { time: '10:00 AM', activity: 'Shibuya Crossing & Hachiko', location: 'Shibuya Station', coordinates: { lat: 35.6585, lng: 139.7013 } },
+            { time: '01:00 PM', activity: 'Harajuku Takeshita Street', location: 'Jingumae', coordinates: { lat: 35.6716, lng: 139.7029 } },
+            { time: '04:00 PM', activity: 'Meiji Jingu Shrine', location: 'Yoyogikamizonocho', coordinates: { lat: 35.6764, lng: 139.6993 } },
+            { time: '08:00 PM', activity: 'Roof Garden Dinner at Shibuya Scramble Square', location: 'Shibuya', coordinates: { lat: 35.6585, lng: 139.7025 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Ancient Echoes',
+          activities: [
+            { time: '09:00 AM', activity: 'Senso-ji Temple Visit', location: 'Asakusa', coordinates: { lat: 35.7148, lng: 139.7967 } },
+            { time: '12:00 PM', activity: 'Traditional Soba Lunch', location: 'Nakamise Street', coordinates: { lat: 35.7123, lng: 139.7963 } },
+            { time: '03:00 PM', activity: 'Ueno Park & National Museum', location: 'Ueno', coordinates: { lat: 35.7141, lng: 139.7733 } },
+            { time: '07:00 PM', activity: 'Imperial Palace Night Walk', location: 'Chiyoda', coordinates: { lat: 35.6852, lng: 139.7528 } }
+          ]
+        },
+        {
+          day: 3,
+          theme: 'High Tech & OTaku Culture',
+          activities: [
+            { time: '10:00 AM', activity: 'Akihabara Electric Town', location: 'Akihabara', coordinates: { lat: 35.6984, lng: 139.7731 } },
+            { time: '01:00 PM', activity: 'Robot Restaurant Experience', location: 'Kabukicho', coordinates: { lat: 35.6946, lng: 139.7023 } },
+            { time: '04:00 PM', activity: 'Tokyo Skytree Sunset', location: 'Sumida', coordinates: { lat: 35.7101, lng: 139.8107 } },
+            { time: '09:00 PM', activity: 'Shinjuku Golden Gai Drinks', location: 'Shinjuku', coordinates: { lat: 35.6940, lng: 139.7042 } }
+          ]
+        },
+        {
+          day: 4,
+          theme: 'The Seafood Experience',
+          activities: [
+            { time: '06:00 AM', activity: 'Tsukiji Outer Market Breakfast', location: 'Tsukiji', coordinates: { lat: 35.6660, lng: 139.7711 } },
+            { time: '10:00 AM', activity: 'Sushi Academy (Hand-on)', location: 'Ginza', coordinates: { lat: 35.6720, lng: 139.7640 } },
+            { time: '02:00 PM', activity: 'Hama-rikyu Gardens', location: 'Chuo City', coordinates: { lat: 35.6596, lng: 139.7634 } },
+            { time: '07:00 PM', activity: 'Kaiseki Dinner', location: 'Roppongi', coordinates: { lat: 35.6641, lng: 139.7294 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'Gadgets', icon: '📱', items: ['Pocket WiFi', 'Power Bank', 'Noise-canceling headphones', 'DSLR Camera'] },
+        { name: 'Wear', icon: '👟', items: ['Slip-on Shoes', 'Uniqlo Airism Layers', 'Light Raincoat'] }
+      ]
+    },
+    reviews: [
+      { user: 'Kenji Y.', rating: 5, text: 'Truly the best way to see my city. Perfect mix of old and new.', avatar: 'K' },
+      { user: 'Liam W.', rating: 5, text: 'Pocket WiFi is a must-have! The itinerary was spot on for finding hidden bars.', avatar: 'L' }
+    ]
+  },
+  {
+    id: 'bali-sanctuary',
+    city: 'Bali',
+    title: 'Tropical Sanctuary',
+    days: 7,
+    budget: 2800,
+    currency: '$',
+    location: { lat: -8.4095, lng: 115.1889, address: 'Bali, Indonesia' },
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80',
+    description: 'Unwind in the lush rice terraces of Ubud and witness the sunset at Tanah Lot in this soul-rejuvenating island getaway.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Spiritual Ubud',
+          activities: [
+            { time: '08:00 AM', activity: 'Tegalalang Rice Terrace Trek', location: 'Ubud', coordinates: { lat: -8.4326, lng: 115.2790 } },
+            { time: '11:00 AM', activity: 'Sacred Monkey Forest Sanctuary', location: 'Ubud', coordinates: { lat: -8.5194, lng: 115.2606 } },
+            { time: '02:00 PM', activity: 'Balinese Spa Treatment', location: 'Yoga Barn', coordinates: { lat: -8.5173, lng: 115.2635 } },
+            { time: '06:00 PM', activity: 'Ubud Palace Dance Performance', location: 'Ubud', coordinates: { lat: -8.5068, lng: 115.2625 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Temple & Beach',
+          activities: [
+            { time: '09:00 AM', activity: 'Tirta Empul Holy Water Temple', location: 'Tampaksiring', coordinates: { lat: -8.4144, lng: 115.2891 } },
+            { time: '01:00 PM', activity: 'Transfer to Seminyak', location: 'Bali', coordinates: { lat: -8.6991, lng: 115.1555 } },
+            { time: '04:00 PM', activity: 'Sunset Cocktails at Potato Head', location: 'Seminyak', coordinates: { lat: -8.6791, lng: 115.1481 } },
+            { time: '08:00 PM', activity: 'Seafood Feast on the Beach', location: 'Jimbaran', coordinates: { lat: -8.7758, lng: 115.1662 } }
+          ]
+        },
+        {
+          day: 3,
+          theme: 'Waterfall Adventure',
+          activities: [
+            { time: '08:00 AM', activity: 'Tegenungan Waterfall Visit', location: 'Sukawati', coordinates: { lat: -8.5751, lng: 115.2898 } },
+            { time: '11:00 AM', activity: 'Bali Swing Experience', location: 'Ubud', coordinates: { lat: -8.4907, lng: 115.2415 } },
+            { time: '03:00 PM', activity: 'Coffee Plantation Tour', location: 'Bali', coordinates: { lat: -8.4095, lng: 115.1889 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'Island Life', icon: '🕶️', items: ['Reef Safe Sunscreen', 'Swimwear', 'Sarong', 'Insect Repellent'] },
+        { name: 'Adventure', icon: '🥾', items: ['Hiking Sandals', 'Waterproof Phone Pouch', 'Quick-dry Towel'] }
+      ]
+    },
+    reviews: [
+      { user: 'Nina P.', rating: 5, text: 'Paradise found. The Ubud rice terraces take your breath away.', avatar: 'N' },
+      { user: 'Marco D.', rating: 4, text: 'Potato Head was great but very crowded. Go early!', avatar: 'M' }
+    ]
+  },
+  {
+    id: 'rome-eternal',
+    city: 'Rome',
+    title: 'The Eternal City',
+    days: 4,
+    budget: 3200,
+    currency: '€',
+    location: { lat: 41.9028, lng: 12.4964, address: 'Rome, Italy' },
+    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80',
+    description: 'Walk through history from the Colosseum to the Vatican, and indulge in the worlds finest pasta and gelato.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Ancient Rome',
+          activities: [
+            { time: '09:00 AM', activity: 'Colosseum Private Tour', location: 'Piazza del Colosseo', coordinates: { lat: 41.8902, lng: 12.4922 } },
+            { time: '12:00 PM', activity: 'Roman Forum Stroll', location: 'Via dei Fori Imperiali', coordinates: { lat: 41.8925, lng: 12.4853 } },
+            { time: '03:00 PM', activity: 'Palatine Hill Views', location: 'Rome', coordinates: { lat: 41.8887, lng: 12.4856 } },
+            { time: '08:00 PM', activity: 'Traditional Roman Dinner at Trastevere', location: 'Trastevere', coordinates: { lat: 41.8893, lng: 12.4688 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Vatican Majesty',
+          activities: [
+            { time: '08:00 AM', activity: 'Vatican Museums & Sistine Chapel', location: 'Vatican City', coordinates: { lat: 41.9065, lng: 12.4548 } },
+            { time: '11:30 AM', activity: 'St. Peters Basilica Climb', location: 'Vatican City', coordinates: { lat: 41.9022, lng: 12.4539 } },
+            { time: '02:00 PM', activity: 'Castel Sant’Angelo Visit', location: 'Lungo il Tevere', coordinates: { lat: 41.9031, lng: 12.4663 } },
+            { time: '07:30 PM', activity: 'Piazza Navona Gelato Walk', location: 'Piazza Navona', coordinates: { lat: 41.8992, lng: 12.4731 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'Style', icon: '👔', items: ['Linen Shirts', 'Stylish Sunglasses', 'Anti-theft Backpack', 'Good Walking Shoes'] }
+      ]
+    },
+    reviews: [
+       { user: 'Luigi B.', rating: 5, text: 'Born in Rome, and this itinerary captures our essence. Trastevere is the real soul.', avatar: 'L' },
+       { user: 'Chloe T.', rating: 5, text: 'The Vatican Museums are huge, so glad I had this guide to keep me on track.', avatar: 'C' }
+    ]
+  },
+  {
+    id: 'santorini-bliss',
+    city: 'Santorini',
+    title: 'Aegean Bliss',
+    days: 3,
+    budget: 3800,
+    currency: '€',
+    location: { lat: 36.3932, lng: 25.4615, address: 'Santorini, Greece' },
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80',
+    description: 'Experience the iconic blue domes of Oia and sail across the volcanic caldera during a golden hour sunset.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Oia Exploration',
+          activities: [
+            { time: '10:00 AM', activity: 'Blue Domes Photography Stroll', location: 'Oia', coordinates: { lat: 36.4618, lng: 25.3753 } },
+            { time: '01:00 PM', activity: 'Fresh Seafood Lunch at Ammoudi Bay', location: 'Ammoudi', coordinates: { lat: 36.4589, lng: 25.3708 } },
+            { time: '04:00 PM', activity: 'Private Yacht Caldera Cruise', location: 'Santorini', coordinates: { lat: 36.4022, lng: 25.4055 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Winery & Beach',
+          activities: [
+            { time: '11:00 AM', activity: 'Santo Winery Wine Tasting', location: 'Pyrgos', coordinates: { lat: 36.3860, lng: 25.4385 } },
+            { time: '02:00 PM', activity: 'Red Beach Visit', location: 'Akrotiri', coordinates: { lat: 36.3475, lng: 25.3950 } },
+            { time: '07:30 PM', activity: 'Dinner with Sunset Views in Thira', location: 'Thira', coordinates: { lat: 36.4172, lng: 25.4315 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'Island Style', icon: '👒', items: ['White Linen Dress', 'Fedora Hat', 'Gladiator Sandals', 'Statement Earrings'] }
+      ]
+    },
+    reviews: [
+      { user: 'Sophie K.', rating: 5, text: ' Magical. The sunset cruise was the absolute highlight of my year.', avatar: 'S' }
+    ]
+  },
+  {
+    id: 'nyc-empire',
+    city: 'New York City',
+    title: 'The Empire State',
+    days: 5,
+    budget: 4500,
+    currency: '$',
+    location: { lat: 40.7128, lng: -74.0060, address: 'New York City, USA' },
+    image: 'https://images.unsplash.com/photo-1496442226666-8d4d1e62e1e9?auto=format&fit=crop&w=1200&q=80',
+    description: 'From Broadway lights to the serenity of Central Park, experience the unstoppable energy of Manhattan.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Manhattan Core',
+          activities: [
+            { time: '09:00 AM', activity: 'Top of the Rock Observatory', location: 'Rockefeller Center', coordinates: { lat: 40.7587, lng: -73.9787 } },
+            { time: '01:00 PM', activity: 'Fifth Avenue Luxury Shopping', location: 'Manhattan', coordinates: { lat: 40.7590, lng: -73.9768 } },
+            { time: '08:00 PM', activity: 'Broadway Show (The Lion King)', location: 'Minskoff Theatre', coordinates: { lat: 40.7578, lng: -73.9858 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Culture & Greenery',
+          activities: [
+            { time: '10:00 AM', activity: 'Central Park Bike Tour', location: 'Central Park', coordinates: { lat: 40.7851, lng: -73.9683 } },
+            { time: '01:30 PM', activity: 'Picnic at Sheep Meadow', location: 'Central Park', coordinates: { lat: 40.7725, lng: -73.9744 } },
+            { time: '03:00 PM', activity: 'The MET Museum Visit', location: 'Upper East Side', coordinates: { lat: 40.7794, lng: -73.9632 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+      categories: [
+        { name: 'City Gear', icon: '🏬', items: ['Power Walk Shoes', 'Designer Outfit', 'Small Umbrella', 'Metro Card'] }
+      ]
+    },
+    reviews: [
+      { user: 'Dan B.', rating: 5, text: 'No city like NYC. This plan misses nothing.', avatar: 'D' }
+    ]
+  },
+  {
+    id: 'kyoto-zen',
+    city: 'Kyoto',
+    title: 'Zen Gardens',
+    days: 4,
+    budget: 3100,
+    currency: '¥',
+    location: { lat: 35.0116, lng: 135.7681, address: 'Kyoto, Japan' },
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80',
+    description: 'Discover the soul of old Japan in the bamboo groves of Arashiyama and the orange gates of Fushimi Inari.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Arashiyama Serenity',
+          activities: [
+            { time: '08:00 AM', activity: 'Arashiyama Bamboo Grove', location: 'Arashiyama', coordinates: { lat: 35.0175, lng: 135.6725 } },
+            { time: '11:00 AM', activity: 'Tenryu-ji Temple', location: 'Kyoto', coordinates: { lat: 35.0157, lng: 135.6748 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Temple & Tradition',
+          activities: [
+            { time: '09:00 AM', activity: 'Kinkaku-ji (Golden Pavilion)', location: 'Kyoto', coordinates: { lat: 35.0394, lng: 135.7292 } },
+            { time: '12:00 PM', activity: 'Nishiki Market Lunch', location: 'Kyoto', coordinates: { lat: 35.0050, lng: 135.7667 } },
+            { time: '03:00 PM', activity: 'Gion District Walk', location: 'Gion', coordinates: { lat: 34.9998, lng: 135.7766 } }
+          ]
+        },
+        {
+          day: 3,
+          theme: 'Spirit of Inari',
+          activities: [
+            { time: '08:00 AM', activity: 'Fushimi Inari-taisha Hike', location: 'Fushimi', coordinates: { lat: 34.9671, lng: 135.7727 } },
+            { time: '01:00 PM', activity: 'Philosophers Path Walk', location: 'Kyoto', coordinates: { lat: 35.0210, lng: 135.7950 } }
+          ]
+        }
+      ]
+    },
+    packingList: {
+       categories: [
+         { name: 'Traditional', icon: '⛩️', items: ['Tabi Socks', 'Light Kimono (Rental Ready)', 'Camera', 'Kyoto Pass'] }
+       ]
+    },
+    reviews: [
+      { user: 'Yuki M.', rating: 5, text: ' Kyoto is silent and beautiful. Bamboo groves are a must-see.', avatar: 'Y' }
+    ]
+  },
+  {
+    id: 'amalfi-splendor',
+    city: 'Amalfi Coast',
+    title: 'Coastal Splendor',
+    days: 5,
+    budget: 4000,
+    currency: '€',
+    location: { lat: 40.6333, lng: 14.6027, address: 'Positano, Italy' },
+    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80',
+    description: 'Sun-drenched terraces, turquoise waters, and lemon-scented air in the most romantic coastline on Earth.',
+    itinerary: {
+      days: [
+        {
+          day: 1,
+          theme: 'Positano Views',
+          activities: [
+            { time: '10:00 AM', activity: 'Path of the Gods Hike', location: 'Nocelle', coordinates: { lat: 40.6272, lng: 14.5029 } },
+            { time: '01:00 PM', activity: 'Lunch at Chez Black', location: 'Positano', coordinates: { lat: 40.6278, lng: 14.4844 } }
+          ]
+        },
+        {
+          day: 2,
+          theme: 'Ravello Heights',
+          activities: [
+            { time: '11:00 AM', activity: 'Villa Cimbrone Gardens', location: 'Ravello', coordinates: { lat: 40.6444, lng: 14.6111 } },
+            { time: '02:00 PM', activity: 'Villa Rufolo Stroll', location: 'Ravello', coordinates: { lat: 40.6500, lng: 14.6120 } }
+          ]
+        },
+        {
+          day: 3,
+          theme: 'Capri Day Trip',
+          activities: [
+            { time: '09:00 AM', activity: 'Ferry to Capri', location: 'Sorrento Port', coordinates: { lat: 40.6273, lng: 14.3758 } },
+            { time: '12:00 PM', activity: 'Blue Grotto Boat Tour', location: 'Capri', coordinates: { lat: 40.5583, lng: 14.2082 } }
+          ]
+        }
+      ]
+    },
+    reviews: [
+      { user: 'Isabella F.', rating: 5, text: 'Positano is a dream I never want to wake up from.', avatar: 'I' }
+    ]
+  },
+  {
+    id: 'swiss-alps',
+    city: 'Swiss Alps',
+    title: 'Alpine Luxury',
+    days: 6,
+    budget: 5500,
+    currency: 'CHF',
+    location: { lat: 46.5996, lng: 7.9824, address: 'Interlaken, Switzerland' },
+    image: 'https://images.unsplash.com/photo-1531310197839-ccf54634509e?auto=format&fit=crop&w=1200&q=80',
+    description: 'Glistening summits, private chalets, and the worlds most punctual train journeys through the heart of Europe.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Jungfraujoch Ascent',
+           activities: [
+             { time: '09:00 AM', activity: 'Eiger Express Cable Car', location: 'Grindelwald', coordinates: { lat: 46.6242, lng: 8.0314 } },
+             { time: '12:00 PM', activity: 'Top of Europe Visit', location: 'Jungfraujoch', coordinates: { lat: 46.5475, lng: 7.9851 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Isenthal Adventure',
+           activities: [
+             { time: '10:00 AM', activity: 'Lake Brienz Cruise', location: 'Interlaken', coordinates: { lat: 46.6865, lng: 7.8632 } },
+             { time: '02:00 PM', activity: 'Giessbach Waterfall Hike', location: 'Brienz', coordinates: { lat: 46.7347, lng: 8.0195 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Matterhorn Magic',
+           activities: [
+             { time: '09:00 AM', activity: 'Train to Zermatt', location: 'Zermatt', coordinates: { lat: 46.0207, lng: 7.7491 } },
+             { time: '01:00 PM', activity: 'Matterhorn Glacier Paradise', location: 'Zermatt', coordinates: { lat: 45.9388, lng: 7.7303 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Hans S.', rating: 5, text: 'Breathtaking mountains and perfectly timed trains. Truly Switzerland.', avatar: 'H' }
+    ]
+  },
+  {
+    id: 'maldives-paradise',
+    city: 'Maldives',
+    title: 'Overwater Paradise',
+    days: 5,
+    budget: 6000,
+    currency: '$',
+    location: { lat: 3.2028, lng: 73.2207, address: 'Male, Maldives' },
+    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80',
+    description: 'Secluded villas, bioluminescent beaches, and pristine coral reefs in the ultimate tropical escape.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Ocean Immersion',
+           activities: [
+             { time: '10:00 AM', activity: 'Coral Reef Snorkeling', location: 'Private Atoll', coordinates: { lat: 3.2028, lng: 73.2207 } },
+             { time: '07:00 PM', activity: 'Private Beachfront BBQ', location: 'Island Resort', coordinates: { lat: 3.2028, lng: 73.2207 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Aerial Bliss',
+           activities: [
+             { time: '11:00 AM', activity: 'Seaplane Scenic Flight', location: 'Maafushi', coordinates: { lat: 3.9452, lng: 73.4891 } },
+             { time: '04:00 PM', activity: 'Dolphin Sunset Cruise', location: 'Maldives', coordinates: { lat: 3.2028, lng: 73.2207 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Spa & Sand',
+           activities: [
+             { time: '10:00 AM', activity: 'Underwater Spa Treatment', location: 'Resort Spa', coordinates: { lat: 3.2028, lng: 73.2207 } },
+             { time: '02:00 PM', activity: 'Sandbank Picnic', location: 'Secluded Sandbank', coordinates: { lat: 3.2028, lng: 73.2207 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Aisha H.', rating: 5, text: ' The snorkeling was like swimming in an aquarium. Beautiful.', avatar: 'A' }
+    ]
+  },
+  {
+    id: 'dubai-marvel',
+    city: 'Dubai',
+    title: 'Desert Marvel',
+    days: 4,
+    budget: 5000,
+    currency: 'AED',
+    location: { lat: 25.2048, lng: 55.2708, address: 'Dubai, UAE' },
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80',
+    description: 'Witness the skyline of the future, shop in luxury megamalls, and stay in the worlds most extravagant hotels.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Sky-High Dubai',
+           activities: [
+             { time: '11:00 AM', activity: 'Burj Khalifa Observation Deck', location: 'Downtown Dubai', coordinates: { lat: 25.1972, lng: 55.2744 } },
+             { time: '03:00 PM', activity: 'Dubai Mall & Aquarium', location: 'Downtown', coordinates: { lat: 25.1985, lng: 55.2796 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Desert Safari',
+           activities: [
+             { time: '03:00 PM', activity: 'Dune Bashing Safari', location: 'Al Badayer', coordinates: { lat: 25.0114, lng: 55.7275 } },
+             { time: '07:00 PM', activity: 'Arabic Buffet Dinner & Belly Dance', location: 'Desert Camp', coordinates: { lat: 25.0114, lng: 55.7275 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Palm Jumeirah',
+           activities: [
+             { time: '10:00 AM', activity: 'Atlantis The Palm Visit', location: 'Palm Jumeirah', coordinates: { lat: 25.1310, lng: 55.1189 } },
+             { time: '05:00 PM', activity: 'Skydiving over The Palm', location: 'Skydive Dubai', coordinates: { lat: 25.0934, lng: 55.1478 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Omar K.', rating: 5, text: 'The view from Burj Khalifa is unparalleled. Truly futuristic.', avatar: 'O' }
+    ]
+  },
+  {
+    id: 'london-royal',
+    city: 'London',
+    title: 'The Royal Journey',
+    days: 5,
+    budget: 3300,
+    currency: '£',
+    location: { lat: 51.5074, lng: -0.1278, address: 'London, UK' },
+    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=80',
+    description: 'Heritage and hipness collide from the historic Tower of London to the street food of Borough Market.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Royal Heritage',
+           activities: [
+             { time: '10:00 AM', activity: 'Buckingham Palace Changing of the Guard', location: 'London', coordinates: { lat: 51.5014, lng: -0.1419 } },
+             { time: '02:00 PM', activity: 'Westminster Abbey Skip-the-line', location: 'Westminster', coordinates: { lat: 51.4993, lng: -0.1273 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Art & River',
+           activities: [
+             { time: '11:00 AM', activity: 'The British Museum', location: 'Bloomsbury', coordinates: { lat: 51.5194, lng: -0.1270 } },
+             { time: '03:00 PM', activity: 'London Eye Sunset Flight', location: 'South Bank', coordinates: { lat: 51.5033, lng: -0.1195 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Modern London',
+           activities: [
+             { time: '10:00 AM', activity: 'The Shard Observatory', location: 'London Bridge', coordinates: { lat: 51.5045, lng: -0.0865 } },
+             { time: '01:00 PM', activity: 'Borough Market Food Tour', location: 'London Bridge', coordinates: { lat: 51.5054, lng: -0.0910 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'James P.', rating: 5, text: 'Authentic London experience. Buckingham Palace was stately as expected.', avatar: 'J' }
+    ]
+  },
+  {
+    id: 'barcelona-gaudi',
+    city: 'Barcelona',
+    title: 'Gaudí & Grit',
+    days: 4,
+    budget: 2900,
+    currency: '€',
+    location: { lat: 41.3851, lng: 2.1734, address: 'Barcelona, Spain' },
+    image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=1200&q=80',
+    description: 'Architectural masterpieces, lively tapaserias, and sun-soaked Mediterranean beaches.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Gaudí Vision',
+           activities: [
+             { time: '09:00 AM', activity: 'Sagrada Familia Cathedral', location: 'Barcelona', coordinates: { lat: 41.4036, lng: 2.1744 } },
+             { time: '12:00 PM', activity: 'Park Güell Stroll', location: 'Barcelona', coordinates: { lat: 41.4145, lng: 2.1527 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Gothic Soul',
+           activities: [
+             { time: '10:00 AM', activity: 'Gothic Quarter Walking Tour', location: 'Barri Gotic', coordinates: { lat: 41.3833, lng: 2.1769 } },
+             { time: '01:00 PM', activity: 'Mercat de Sant Josep de la Boqueria', location: 'La Rambla', coordinates: { lat: 41.3820, lng: 2.1720 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Beach & Tapas',
+           activities: [
+             { time: '11:00 AM', activity: 'Barceloneta Beach Relaxation', location: 'Barceloneta', coordinates: { lat: 41.3785, lng: 2.1895 } },
+             { time: '08:00 PM', activity: 'Tapas Crawl in El Born', location: 'El Born', coordinates: { lat: 41.3850, lng: 2.1820 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Carmen S.', rating: 5, text: 'Gaudí creations are magical. I loved every moment in Barcelona.', avatar: 'C' }
+    ]
+  },
+  {
+    id: 'seoul-dynasty',
+    city: 'Seoul',
+    title: 'Modern Dynasty',
+    days: 5,
+    budget: 3400,
+    currency: '₩',
+    location: { lat: 37.5665, lng: 126.9780, address: 'Seoul, South Korea' },
+    image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1200&q=80',
+    description: 'Hyper-modern skyscrapers neighboring serene Confucian palaces and late-night K-BBQ alleys.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Palaces & Parks',
+           activities: [
+             { time: '10:00 AM', activity: 'Gyeongbokgung Palace', location: 'Seoul', coordinates: { lat: 37.5796, lng: 126.9770 } },
+             { time: '03:00 PM', activity: 'N Seoul Tower Sunset', location: 'Namsan Mountain', coordinates: { lat: 37.5512, lng: 126.9882 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'K-Style & Shopping',
+           activities: [
+             { time: '11:00 AM', activity: 'Myeongdong Shopping Street', location: 'Seoul', coordinates: { lat: 37.5609, lng: 126.9862 } },
+             { time: '03:00 PM', activity: 'Bukchon Hanok Village Walk', location: 'Jongno-gu', coordinates: { lat: 37.5826, lng: 126.9836 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'DMZ Expedition',
+           activities: [
+             { time: '08:00 AM', activity: 'DMZ Half-Day Tour', location: 'Imjingak', coordinates: { lat: 37.8893, lng: 126.7415 } },
+             { time: '07:00 PM', activity: 'Hongdae Nightlife', location: 'Seoul', coordinates: { lat: 37.5565, lng: 126.9238 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Minhyuk J.', rating: 5, text: 'Seoul is so alive! K-BBQ after N Tower was the perfect ending.', avatar: 'M' }
+    ]
+  },
+  {
+    id: 'cape-town',
+    city: 'Cape Town',
+    title: 'The Table Mountain',
+    days: 5,
+    budget: 2700,
+    currency: 'R',
+    location: { lat: -33.9249, lng: 18.4232, address: 'Cape Town, South Africa' },
+    image: 'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=1200&q=80',
+    description: 'Dramatic landscapes where the mountain meets the sea, world-class vineyards, and a vibrant cultural heart.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Summit Views',
+           activities: [
+             { time: '08:00 AM', activity: 'Table Mountain Cable Way', location: 'Cape Town', coordinates: { lat: -33.9628, lng: 18.4098 } },
+             { time: '02:00 PM', activity: 'V&A Waterfront Shopping & Lunch', location: 'Cape Town', coordinates: { lat: -33.9067, lng: 18.4239 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Coastal Loop',
+           activities: [
+             { time: '09:00 AM', activity: 'Cape Point Scenic Drive', location: 'Cape Peninsula', coordinates: { lat: -34.3568, lng: 18.4975 } },
+             { time: '01:00 PM', activity: 'Boulders Beach Penguins', location: 'Simons Town', coordinates: { lat: -34.1970, lng: 18.4513 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Vineyard Bliss',
+           activities: [
+             { time: '11:00 AM', activity: 'Stellenbosch Wine Tasting', location: 'Stellenbosch', coordinates: { lat: -33.9321, lng: 18.8602 } },
+             { time: '03:00 PM', activity: 'Franschhoek Wine Tram', location: 'Franschhoek', coordinates: { lat: -33.9110, lng: 19.1170 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Zanele M.', rating: 5, text: 'Table Mountain was spiritual and awe-inspiring.', avatar: 'Z' }
+    ]
+  },
+  {
+    id: 'machu-picchu',
+    city: 'Machu Picchu',
+    title: 'The Inca Trail',
+    days: 6,
+    budget: 3000,
+    currency: 'S/',
+    location: { lat: -13.1631, lng: -72.5450, address: 'Machu Picchu, Peru' },
+    image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=1200&q=80',
+    description: 'Walk the sacred path of the Incas to the legendary city in the clouds, a wonder of the ancient world.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Sanctuary Entry',
+           activities: [
+             { time: '06:00 AM', activity: 'Sunrise at Sun Gate', location: 'Machu Picchu', coordinates: { lat: -13.1631, lng: -72.5450 } },
+             { time: '10:00 AM', activity: 'Ruins Guided Archaeology Tour', location: 'Machu Picchu', coordinates: { lat: -13.1631, lng: -72.5450 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Cusco Culture',
+           activities: [
+             { time: '11:00 AM', activity: 'Plaza de Armas Walk', location: 'Cusco', coordinates: { lat: -13.5160, lng: -71.9785 } },
+             { time: '03:00 PM', activity: 'Sacsayhuaman Fortress', location: 'Cusco Outskirts', coordinates: { lat: -13.5098, lng: -71.9822 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Sacred Valley',
+           activities: [
+             { time: '09:00 AM', activity: 'Ollantaytambo Ruins', location: 'Sacred Valley', coordinates: { lat: -13.2586, lng: -72.2618 } },
+             { time: '02:00 PM', activity: 'Pisac Artisan Market', location: 'Sacred Valley', coordinates: { lat: -13.4219, lng: -71.8486 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Ricardo G.', rating: 5, text: 'Machu Picchu is the most majestic place on earth.', avatar: 'R' }
+    ]
+  },
+  {
+    id: 'reykjavik-ice',
+    city: 'Reykjavik',
+    title: 'Land of Fire & Ice',
+    days: 4,
+    budget: 3900,
+    currency: 'ISK',
+    location: { lat: 64.1265, lng: -21.8174, address: 'Reykjavik, Iceland' },
+    image: 'https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1200&q=80',
+    description: 'Glaciers, volcanoes, and the shimmering Northern Lights in the worlds northernmost capital.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Blue Lagoon Bliss',
+           activities: [
+             { time: '11:00 AM', activity: 'Blue Lagoon Spa Immersion', location: 'Grindavík', coordinates: { lat: 63.8804, lng: -22.4495 } },
+             { time: '08:00 PM', activity: 'Northern Lights Hunting Expedition', location: 'Reykjavik Outskirts', coordinates: { lat: 64.1265, lng: -21.8174 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Golden Circle',
+           activities: [
+             { time: '09:00 AM', activity: 'Gullfoss Waterfall', location: 'Iceland', coordinates: { lat: 64.3271, lng: -20.1199 } },
+             { time: '01:00 PM', activity: 'Geysir Geothermal Area', location: 'Haukadalur', coordinates: { lat: 64.3104, lng: -20.3024 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'South Coast Wonders',
+           activities: [
+             { time: '10:00 AM', activity: 'Seljalandsfoss Waterfall', location: 'Hvolsvollur', coordinates: { lat: 63.6156, lng: -19.9886 } },
+             { time: '02:00 PM', activity: 'Black Sand Beach (Reynisfjara)', location: 'Vik', coordinates: { lat: 63.4042, lng: -19.0435 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Elín K.', rating: 5, text: 'The Blue Lagoon in the snow was an incredible experience.', avatar: 'E' }
+    ]
+  },
+  {
+    id: 'bora-bora',
+    city: 'Bora Bora',
+    title: 'The Blue Lagoon',
+    days: 5,
+    budget: 7000,
+    currency: '$',
+    location: { lat: -16.5004, lng: -151.7415, address: 'Bora Bora, French Polynesia' },
+    image: 'https://images.unsplash.com/photo-1505881502353-a1986add3730?auto=format&fit=crop&w=1200&q=80',
+    description: 'Turquoise lagoons, overwater thatched villas, and Mount Otemanu rising dramatically from the sea.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Lagoon Paradise',
+           activities: [
+             { time: '10:00 AM', activity: 'Shark and Ray Snorkeling Safari', location: 'Lagoon', coordinates: { lat: -16.5004, lng: -151.7415 } },
+             { time: '01:00 PM', activity: 'Beachfront Lunch with Traditional Dance', location: 'Island Side', coordinates: { lat: -16.5004, lng: -151.7415 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Aerial Majesty',
+           activities: [
+             { time: '11:00 AM', activity: 'Helicopter Tour over Mount Otemanu', location: 'Bora Bora', coordinates: { lat: -16.5011, lng: -151.7347 } },
+             { time: '03:00 PM', activity: 'Jet Ski Adventure', location: 'Lagoon', coordinates: { lat: -16.5004, lng: -151.7415 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Sunset Romance',
+           activities: [
+             { time: '05:00 PM', activity: 'Catamaran Sunset Cruise', location: 'Vaitape', coordinates: { lat: -16.5058, lng: -151.7514 } },
+             { time: '08:00 PM', activity: 'Starlit Overwater Dinner', location: 'Resort', coordinates: { lat: -16.5004, lng: -151.7415 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Marc T.', rating: 5, text: 'Bora Bora is truly a once in a lifetime paradise.', avatar: 'M' }
+    ]
+  },
+  {
+    id: 'prague-golden',
+    city: 'Prague',
+    title: 'The Golden City',
+    days: 4,
+    budget: 2500,
+    currency: 'Kč',
+    location: { lat: 50.0755, lng: 14.4378, address: 'Prague, Czech Republic' },
+    image: 'https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1200&q=80',
+    description: 'A fairytale labyrinth of cobblestone streets, gothic spires, and historic river bridges.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Old Town Magic',
+           activities: [
+             { time: '10:00 AM', activity: 'Astronomical Clock Show', location: 'Old Town Square', coordinates: { lat: 50.0870, lng: 14.4207 } },
+             { time: '02:00 PM', activity: 'Charles Bridge Crossing', location: 'Vltava River', coordinates: { lat: 50.0865, lng: 14.4114 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Castle Heights',
+           activities: [
+             { time: '09:00 AM', activity: 'Prague Castle Tour', location: 'Hradčany', coordinates: { lat: 50.0909, lng: 14.4005 } },
+             { time: '01:00 PM', activity: 'St. Vitus Cathedral', location: 'Castle District', coordinates: { lat: 50.0909, lng: 14.4005 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Riverside Relaxation',
+           activities: [
+             { time: '11:00 AM', activity: 'Vltava River Jazz Cruise', location: 'Prague', coordinates: { lat: 50.0880, lng: 14.4100 } },
+             { time: '07:00 PM', activity: 'Traditional Czech Beer Hall Night', location: 'Old Town', coordinates: { lat: 50.0870, lng: 14.4207 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Petr H.', rating: 5, text: 'Seeing the Astronomical Clock strikes was amazing.', avatar: 'P' }
+    ]
+  },
+  {
+    id: 'marrakech-gate',
+    city: 'Marrakech',
+    title: 'The Saharan Gateway',
+    days: 4,
+    budget: 2800,
+    currency: 'DH',
+    location: { lat: 31.6295, lng: -7.9811, address: 'Marrakech, Morocco' },
+    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&fit=crop&w=1200&q=80',
+    description: 'A sensory explosion of vibrant souks, intricate riads, and the scent of exotic spices at every corner.',
+    itinerary: {
+       days: [
+         {
+           day: 1,
+           theme: 'Medina Labyrinth',
+           activities: [
+             { time: '09:00 AM', activity: 'Jardin Majorelle Tour', location: 'Marrakech', coordinates: { lat: 31.6418, lng: -8.0033 } },
+             { time: '01:00 PM', activity: 'Scent of the Souks (Market Tour)', location: 'Medina', coordinates: { lat: 31.6258, lng: -7.9891 } }
+           ]
+         },
+         {
+           day: 2,
+           theme: 'Royal Riads',
+           activities: [
+             { time: '10:00 AM', activity: 'Bahia Palace Visit', location: 'Marrakech', coordinates: { lat: 31.6217, lng: -7.9816 } },
+             { time: '02:00 PM', activity: 'Koutoubia Mosque Stroll', location: 'Marrakech', coordinates: { lat: 31.6258, lng: -7.9936 } }
+           ]
+         },
+         {
+           day: 3,
+           theme: 'Desert Tastes',
+           activities: [
+             { time: '10:00 AM', activity: 'Moroccan Cooking Class', location: 'Riad La Maison', coordinates: { lat: 31.6295, lng: -7.9811 } },
+             { time: '07:00 PM', activity: 'Jemaa el-Fnaa Night Food Market', location: 'Medina Square', coordinates: { lat: 31.6258, lng: -7.9891 } }
+           ]
+         }
+       ]
+    },
+    reviews: [
+      { user: 'Sanaa M.', rating: 5, text: 'Majorelle garden was like an oasis in the middle of Marrakech.', avatar: 'S' }
+    ]
+  }
+];
