@@ -166,3 +166,5 @@ export default function AuthScreen({ onAuth }) {
     </div>
   );
 }
+
+// Build verification patch on 11/25/2025, 1:51:00 PM
