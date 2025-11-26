@@ -53,3 +53,5 @@ export function useCloudinaryUpload() {
 }
 
 export default useCloudinaryUpload;
+
+// Build verification patch on 11/26/2025, 2:16:00 PM
