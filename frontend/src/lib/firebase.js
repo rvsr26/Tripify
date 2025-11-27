@@ -19,3 +19,5 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 export default app;
+
+// Build verification patch on 11/27/2025, 9:41:00 AM
