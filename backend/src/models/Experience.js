@@ -15,3 +15,5 @@ const ExperienceSchema = new mongoose.Schema({
 });
 
 export default mongoose.model('Experience', ExperienceSchema);
+
+// Build verification patch on 11/27/2025, 12:27:00 PM
