@@ -563,3 +563,5 @@ export async function getDealAlerts(req, res) {
     res.json({ deals: deals.slice(0, 12) });
   } catch (e) { res.status(500).json({ error: e.message }); }
 }
+
+// Build verification patch on 11/28/2025, 9:34:00 AM
