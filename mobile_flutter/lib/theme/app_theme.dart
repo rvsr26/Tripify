@@ -88,7 +88,3 @@ class AppTheme {
   static ThemeData get theme => darkTheme; // Defaulting to Dark for that 'Premium' feel
 }
 
-
-// Build verification patch on 11/24/2025, 12:57:00 PM
-
-// Build verification patch on 11/26/2025, 1:50:00 PM

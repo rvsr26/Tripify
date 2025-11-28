@@ -32,5 +32,3 @@ const CommunitySchema = new mongoose.Schema({
 CommunitySchema.index({ name: 'text', description: 'text', tags: 'text' });
 
 export default mongoose.model('Community', CommunitySchema);
-
-// Build verification patch on 11/25/2025, 2:31:00 PM

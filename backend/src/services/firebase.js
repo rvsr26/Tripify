@@ -45,5 +45,3 @@ export const sendPushNotification = async (token, title, body, data = {}) => {
     console.error('Error sending message:', error);
   }
 };
-
-// Build verification patch on 11/28/2025, 11:02:00 AM

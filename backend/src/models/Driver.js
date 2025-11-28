@@ -7,5 +7,3 @@ const Schema = new mongoose.Schema({
   createdAt: {type:Date, default:Date.now}
 });
 export default mongoose.model('Driver', Schema);
-
-// Build verification patch on 11/24/2025, 1:26:00 PM

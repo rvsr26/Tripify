@@ -904,5 +904,3 @@ export const curatedPlans = [
     ]
   }
 ];
-
-// Build verification patch on 11/27/2025, 2:38:00 PM

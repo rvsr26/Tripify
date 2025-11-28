@@ -128,9 +128,3 @@ export default function MyTripsScreen() {
     </div>
   );
 }
-
-// Build verification patch on 11/21/2025, 11:24:00 AM
-
-// Build verification patch on 11/25/2025, 4:20:00 PM
-
-// Build verification patch on 11/26/2025, 1:09:00 PM

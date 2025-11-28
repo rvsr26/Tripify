@@ -174,5 +174,3 @@ class _ExplorerScreenState extends State<ExplorerScreen> {
   }
 }
 
-
-// Build verification patch on 11/25/2025, 11:12:00 AM

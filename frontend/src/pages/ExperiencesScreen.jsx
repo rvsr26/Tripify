@@ -94,5 +94,3 @@ export default function ExperiencesScreen() {
     </div>
   );
 }
-
-// Build verification patch on 11/21/2025, 1:57:00 PM

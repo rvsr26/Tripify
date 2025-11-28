@@ -213,5 +213,3 @@ export default function FeedScreen() {
     </div>
   );
 }
-
-// Build verification patch on 11/25/2025, 9:35:00 AM

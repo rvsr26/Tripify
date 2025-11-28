@@ -265,5 +265,3 @@ export default function PlannerScreen() {
     </div>
   );
 }
-
-// Build verification patch on 11/28/2025, 2:04:00 PM

@@ -240,7 +240,3 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   }
 }
 
-
-// Build verification patch on 11/26/2025, 3:18:00 PM
-
-// Build verification patch on 11/28/2025, 12:57:00 PM

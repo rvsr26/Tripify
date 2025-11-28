@@ -183,5 +183,3 @@ export default function QuizScreen() {
     </div>
   );
 }
-
-// Build verification patch on 11/24/2025, 1:59:00 PM

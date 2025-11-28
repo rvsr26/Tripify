@@ -23,7 +23,3 @@ export async function getRide(req, res){
   if(!b) return res.status(404).json({error:'not found'});
   res.json({ booking: b });
 }
-
-// Build verification patch on 11/24/2025, 9:33:00 AM
-
-// Build verification patch on 11/25/2025, 12:33:00 PM

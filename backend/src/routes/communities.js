@@ -24,5 +24,3 @@ router.post('/:id/posts',   authMiddleware, createPost);
 router.post('/:id/posts/:postId/like', authMiddleware, likePost);
 
 export default router;
-
-// Build verification patch on 11/28/2025, 11:31:00 AM

@@ -147,5 +147,3 @@ export async function getPendingCount(req, res) {
     res.status(500).json({ error: e.message });
   }
 }
-
-// Build verification patch on 11/25/2025, 10:32:00 AM

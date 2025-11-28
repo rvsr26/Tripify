@@ -472,5 +472,3 @@ export default function CommunitiesScreen({ currentUserId }) {
     </div>
   );
 }
-
-// Build verification patch on 11/28/2025, 2:32:00 PM
