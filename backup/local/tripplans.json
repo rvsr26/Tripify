@@ -1,0 +1,1312 @@
+[
+  {
+    "_id": "69cbb3fbbf67f91f119101b1",
+    "userId": "69cbb3d1bf67f91f119101ab",
+    "title": "3-Day Trip to delhi",
+    "city": "delhi",
+    "budget": 1000,
+    "days": 3,
+    "interests": [
+      "food"
+    ],
+    "prompt": "Plan a 3-day trip to delhi with a budget of ₹1000. Interests: food. Return a JSON with: \"days\" (array of objects: \"day\" number, \"date\" timestamp/string, \"title\", and \"activities\" array with time schedule), \"tips\" (array of strings), and \"totalCost\" (number).",
+    "itinerary": {
+      "error": "AI_ERROR",
+      "detail": "Connection error."
+    },
+    "estimatedCost": 0,
+    "isPublic": true,
+    "createdAt": "2026-03-31T11:46:03.064Z",
+    "__v": 1,
+    "budgetSpent": 0,
+    "chatHistory": [],
+    "commentsCount": 0,
+    "currency": "$",
+    "expenses": [],
+    "likes": []
+  },
+  {
+    "_id": "69cbe519afe1169a3a27fa43",
+    "userId": "69cbb3d1bf67f91f119101ab",
+    "title": "5-Day Budget Anime & Food Tokyo Blitz Trip to Japan",
+    "city": "Japan",
+    "days": 5,
+    "interests": [
+      "food"
+    ],
+    "prompt": "Plan a 5-day trip to Japan, budget $1500, food and anime, with friends, in October",
+    "itinerary": {
+      "trip_name": "Budget Anime & Food Tokyo Blitz",
+      "destination": "Tokyo, Japan",
+      "duration_days": 5,
+      "travelers": "Friends",
+      "travel_month": "October",
+      "budget_notes": "The $1500 USD budget is assumed to be per person for *on-ground expenses* (food, local transport, activities, and souvenirs), *excluding international flights and primary accommodation costs*. This requires careful budgeting, prioritizing affordable meals, and utilizing public transport.",
+      "itinerary": [
+        {
+          "day": 1,
+          "theme": "Arrival & Akihabara Immersion",
+          "activities": [
+            "Morning/Afternoon: Arrive at Narita (NRT) or Haneda (HND) Airport. Take the most cost-effective transport (e.g., Keisei Limited Express for NRT, Keikyu Line for HND) to your accommodation.",
+            "Check into your budget-friendly hotel or hostel in a central location (e.g., Shinjuku, Ueno, Ikebukuro).",
+            "Late Afternoon: Head straight to Akihabara (Electric Town). Explore the multi-story arcades (e.g., SEGA, Taito Station), browse anime and manga shops (Mandarake, Animate, Akiba Culture Zone).",
+            "Evening: Visit a themed cafe (e.g., a maid cafe for the experience, or a Gundam Cafe if budget allows for a quick drink). Explore more shops or an electronics store like Yodobashi Akiba."
+          ],
+          "food_recommendations": [
+            "Lunch (on arrival): Grab a quick bento box or onigiri from a convenience store at the airport or near your accommodation.",
+            "Dinner: Indulge in classic Akihabara ramen at a local shop (e.g., Kikanbo or any popular local spot) for around ¥800-¥1200.",
+            "Snack: Try a 'takoyaki' (octopus balls) street snack."
+          ],
+          "travel_tips": [
+            "Purchase a Suica or Pasmo IC card immediately for easy transport. Load about ¥3000-¥5000 to start.",
+            "Walk as much as possible in Akihabara to save on local transport costs within the district.",
+            "Many anime shops offer tax-free shopping for tourists on purchases over ¥5000, so keep your passport handy."
+          ]
+        },
+        {
+          "day": 2,
+          "theme": "Shibuya's Buzz & Shinjuku's Lights",
+          "activities": [
+            "Morning: Start at Shibuya. Witness the iconic Shibuya Scramble Crossing, visit the Hachiko statue. Explore the trendy shops and department stores (e.g., Shibuya 109). Consider a quick photo stop at a viewing point (e.g., Magnet by Shibuya 109 rooftop or Shibuya Sky if budget allows for the entry fee).",
+            "Afternoon: Take the train to Shinjuku. Relax and stroll through the beautiful Shinjuku Gyoen National Garden (entry fee ~¥500).",
+            "Late Afternoon/Evening: Explore Shinjuku's bustling streets. See the giant Godzilla Head on the Toho Cinema building. Wander through Kabukicho (Tokyo's entertainment district, be mindful of scams).",
+            "Optional (if budget allows for a drink): Experience the unique atmosphere of Golden Gai or Shinjuku Ni-chome."
+          ],
+          "food_recommendations": [
+            "Breakfast: Grab pastries and coffee from a local bakery or convenience store (approx. ¥300-¥500).",
+            "Lunch: Try a hearty Tonkatsu (fried pork cutlet) set meal in Shibuya or Shinjuku (approx. ¥1000-¥1800).",
+            "Dinner: Experience an affordable Izakaya (Japanese pub) in Shinjuku for shared plates and drinks (e.g., Torikizoku for yakitori, known for its ¥300 flat price menu).",
+            "Snack: Indulge in a crepe in Harajuku (if time permits a quick detour) or a sweet potato snack."
+          ],
+          "travel_tips": [
+            "Wear comfortable shoes, as you'll be doing a lot of walking today.",
+            "For Shibuya Scramble, head to the Starbucks on the second floor of Tsutaya for a great vantage point without a fee.",
+            "Shinjuku Gyoen is a peaceful escape from the city's hustle, perfect for a budget-friendly relaxation."
+          ]
+        },
+        {
+          "day": 3,
+          "theme": "Ghibli Magic & Nakano Nerdery",
+          "activities": [
+            "Morning (Crucial!): Visit the Ghibli Museum in Mitaka. *Tickets must be purchased months in advance and are timed entry.* (If unable to secure tickets, consider a visit to the Edo-Tokyo Open Air Architectural Museum nearby, or explore Ikebukuro more extensively).",
+            "Afternoon: Head to Nakano Broadway. This multi-story shopping complex is a haven for vintage anime, manga, figurines, idol goods, and unique collectibles. It's often less crowded and cheaper than Akihabara.",
+            "Late Afternoon/Evening: Explore Ikebukuro. Visit the Pokemon Center Mega Tokyo and the official Animate flagship store, which is a massive anime goods retailer. Browse the Sunshine City complex for shops and attractions."
+          ],
+          "food_recommendations": [
+            "Breakfast: Quick breakfast from a convenience store.",
+            "Lunch: Grab a quick and affordable meal inside Nakano Broadway (e.g., a simple Donburi bowl or curry rice for ¥700-¥1200).",
+            "Dinner: Enjoy a Kaiten Sushi (conveyor belt sushi) experience in Ikebukuro for a fun and budget-friendly meal (plates typically ¥100-¥300 each).",
+            "Snack: Try the famous soft cream from Daily Chico in Nakano Broadway (known for its 8-flavour mega cone!)."
+          ],
+          "travel_tips": [
+            "Ghibli Museum tickets sell out *fast*. Book them online as soon as possible, typically on the 10th of the month for the following month.",
+            "Nakano Broadway is excellent for unique souvenirs and rarer finds. Don't be afraid to haggle slightly in smaller independent shops, but it's not common practice.",
+            "Ikebukuro is a fantastic alternative for anime/manga shopping if Akihabara feels too overwhelming or if you're looking for different items."
+          ]
+        },
+        {
+          "day": 4,
+          "theme": "Traditional Asakusa & Ueno Culture",
+          "activities": [
+            "Morning: Immerse yourselves in traditional Tokyo at Asakusa. Walk through Nakamise-dori, a bustling market street leading to Senso-ji Temple, Tokyo's oldest temple. Explore the temple grounds and get your fortunes told (omikuji).",
+            "Afternoon: Take the train to Ueno. Explore Ueno Park, home to several museums (Tokyo National Museum, Tokyo Metropolitan Art Museum - entry fees apply, choose one if budget allows), Ueno Zoo (entry fee), and beautiful shrines.",
+            "Late Afternoon: Stroll through Ameya-Yokocho (Ameyoko) Market, a lively outdoor market perfect for people-watching and grabbing cheap snacks.",
+            "Evening: Consider taking photos of the Tokyo Skytree lit up from a distance (e.g., from Sumida Park or Azuma Bridge) without paying the observation deck fee."
+          ],
+          "food_recommendations": [
+            "Breakfast: Onigiri or pastries from a local shop.",
+            "Lunch: Try Ten-don (tempura rice bowl) or Unagi (eel) at a traditional restaurant in Asakusa (Ten-don is more budget-friendly, approx. ¥1000-¥1800).",
+            "Dinner: Sample street food and local eats at Ameyoko Market (yakitori, grilled seafood, fresh fruits, etc.) or find an affordable eatery nearby.",
+            "Snack: Melon pan from Asakusa, or various snacks from the Ameyoko Market."
+          ],
+          "travel_tips": [
+            "Be respectful when visiting Senso-ji Temple; observe local customs for purification and prayer.",
+            "Ueno Park offers many free attractions like walking paths, shrines, and seasonal views. Prioritize which museum, if any, fits your interests and budget.",
+            "Ameyoko Market is great for bargain hunting and trying various budget-friendly snacks and drinks."
+          ]
+        },
+        {
+          "day": 5,
+          "theme": "Last-Minute Souvenirs & Departure",
+          "activities": [
+            "Morning: Depending on your flight schedule, use this time for last-minute souvenir shopping. Revisit your favorite area (e.g., Akihabara for specific anime goods, or a department store basement 'depachika' for unique food souvenirs).",
+            "Alternatively, if time allows and you want one more anime hit, consider visiting the official Jump Shop (Tokyo Dome City LaQua or Tokyo Character Street at Tokyo Station).",
+            "Enjoy a final Japanese meal.",
+            "Afternoon: Head back to Narita (NRT) or Haneda (HND) Airport for your departure, ensuring you allow ample travel time."
+          ],
+          "food_recommendations": [
+            "Breakfast: A hearty breakfast at a local cafe or convenience store.",
+            "Lunch: A final favorite Japanese dish – perhaps a Katsudon, a simple but delicious Udon or Soba, or a quick curry.",
+            "Snack: Grab some last-minute Japanese sweets or snacks for your journey home from the airport or a convenience store."
+          ],
+          "travel_tips": [
+            "Purchase souvenirs strategically. Airports often have good selections, but city shops might offer better prices or unique items.",
+            "Always confirm airport transport timings and ensure you have enough balance on your IC card or cash for tickets.",
+            "Remember to use any remaining yen before you leave, or save some for your next trip!"
+          ]
+        }
+      ],
+      "general_travel_tips": [
+        "**Budget Management**: Stick to cash for daily expenses to track spending. Utilize convenience stores (Lawson, 7-Eleven, FamilyMart) for cheap breakfasts, lunches, and snacks.",
+        "**Accommodation**: Consider hostels, capsule hotels, or budget hotel chains (e.g., APA Hotel, Toyoko Inn) for cost-saving. Sharing an Airbnb apartment with friends can also be economical.",
+        "**Food**: Prioritize ramen, udon, soba, donburi (rice bowls), and convenience store bentos. Look for 'set meals' (teishoku) during lunch hours for better value. Supermarket delis offer great discounts in the evenings.",
+        "**Transportation**: The Tokyo Metro and JR lines are efficient. Use a Suica/Pasmo IC card. For short distances, walk! Group travel can sometimes benefit from day passes if you plan extensive travel within a single day, but pay-as-you-go is often best.",
+        "**Connectivity**: Rent a pocket Wi-Fi device for the group or buy a local SIM card for constant navigation and communication. This is crucial for navigating Tokyo.",
+        "**Language**: Learn a few basic Japanese phrases (konnichiwa, arigato, sumimasen). Google Translate with its camera function is very helpful.",
+        "**October Weather**: Tokyo in October usually has pleasant, mild weather with clear skies and comfortable temperatures (around 15-22°C/59-72°F). Pack layers, as evenings can be cooler.",
+        "**Group Dynamics**: Discuss daily budgets and interests with your friends beforehand to ensure everyone is on the same page and can enjoy the trip without financial stress."
+      ],
+      "isMock": false
+    },
+    "estimatedCost": 0,
+    "isPublic": false,
+    "naturalLanguagePrompt": "Plan a 5-day trip to Japan, budget $1500, food and anime, with friends, in October",
+    "selectedOption": "A",
+    "optionName": "Budget Anime & Food Tokyo Blitz",
+    "currency": "USD",
+    "month": "October",
+    "travelWith": "friends",
+    "budgetSpent": 0,
+    "likes": [],
+    "commentsCount": 0,
+    "admin": "69cbb3d1bf67f91f119101ab",
+    "members": [
+      {
+        "userId": "69cbb3d1bf67f91f119101ab",
+        "role": "admin",
+        "joinedAt": "2026-03-31T15:15:37.095Z"
+      }
+    ],
+    "isOpenToJoin": false,
+    "maxMembers": 20,
+    "inviteToken": "923b3c36-fb7a-4783-848a-335e21d3a0b3",
+    "location": {
+      "lat": 36.5748441,
+      "lng": 139.2394179,
+      "address": "日本"
+    },
+    "expenses": [],
+    "chatHistory": [],
+    "joinRequests": [],
+    "createdAt": "2026-03-31T15:15:37.097Z",
+    "__v": 0
+  },
+  {
+    "_id": "69cbea3f81621f683c70a931",
+    "userId": "69cbb3d1bf67f91f119101ab",
+    "title": "7-Day Luxury Art Immersion Trip to Paris",
+    "city": "Paris",
+    "days": 7,
+    "interests": [
+      "food"
+    ],
+    "prompt": "Plan a 7-day trip to Paris under €2000, solo traveler, art and museums",
+    "itinerary": {
+      "days": [
+        {
+          "day": 1,
+          "title": "Arrival & Louvre Masterpieces",
+          "activities": [
+            {
+              "time": "3:00 PM",
+              "activity": "Hotel Check-in & Settle In",
+              "description": "Arrive in Paris, check into your accommodation, and take some time to relax and prepare for the week ahead. Consider a central location to minimize travel time.",
+              "cost": 0,
+              "location": "Your Hotel/Accommodation"
+            },
+            {
+              "time": "4:30 PM",
+              "activity": "Louvre Museum Immersion",
+              "description": "Embark on an immersive visit to the Louvre. Focus on specific wings or collections that pique your interest, such as Egyptian Antiquities, Italian Renaissance, or French Paintings, rather than trying to see everything. Book your timed entry ticket in advance.",
+              "cost": 22,
+              "location": "Louvre Museum"
+            },
+            {
+              "time": "8:00 PM",
+              "activity": "Dinner in Le Marais",
+              "description": "After your museum visit, stroll through the charming streets of Le Marais and find a traditional French bistro for a classic Parisian dinner.",
+              "cost": 40,
+              "location": "Le Marais District"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Impressionist Wonders & Seine Serenity",
+          "activities": [
+            {
+              "time": "9:00 AM",
+              "activity": "Musée d'Orsay Exploration",
+              "description": "Start your day early at the magnificent Musée d'Orsay, housed in a former railway station. Delve into its unparalleled collection of Impressionist and Post-Impressionist masterpieces, including works by Monet, Van Gogh, and Renoir.",
+              "cost": 16,
+              "location": "Musée d'Orsay"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Lunch at a Riverside Cafe",
+              "description": "Enjoy a leisurely lunch at a cafe near the Seine, perhaps with views of the river or Pont des Arts.",
+              "cost": 25,
+              "location": "Near Musée d'Orsay"
+            },
+            {
+              "time": "2:30 PM",
+              "activity": "Musée de l'Orangerie & Tuileries Garden",
+              "description": "Visit the Musée de l'Orangerie to experience Monet's monumental Water Lilies series in a uniquely designed space. Afterwards, take a serene stroll through the adjacent Jardin des Tuileries.",
+              "cost": 12.5,
+              "location": "Musée de l'Orangerie"
+            },
+            {
+              "time": "6:00 PM",
+              "activity": "Seine River Cruise",
+              "description": "Unwind with a basic scenic cruise along the Seine River, offering breathtaking views of iconic Parisian landmarks illuminated at dusk. It's a fantastic way to see the city from a different perspective.",
+              "cost": 18,
+              "location": "Pont Neuf or Eiffel Tower departure"
+            },
+            {
+              "time": "8:00 PM",
+              "activity": "Dinner in Saint-Germain-des-Prés",
+              "description": "Explore the elegant Saint-Germain-des-Prés district and enjoy dinner in one of its classic brasseries.",
+              "cost": 35,
+              "location": "Saint-Germain-des-Prés"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Modern Art & Picasso's Legacy",
+          "activities": [
+            {
+              "time": "10:00 AM",
+              "activity": "Centre Pompidou Exploration",
+              "description": "Immerse yourself in modern and contemporary art at the Centre Pompidou. Explore its extensive collections and enjoy panoramic views of Paris from its rooftop. Book your ticket online for timed entry.",
+              "cost": 15,
+              "location": "Centre Pompidou"
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Lunch in Le Marais",
+              "description": "Grab a delicious casual lunch in the vibrant Le Marais district, known for its diverse food options.",
+              "cost": 20,
+              "location": "Le Marais District"
+            },
+            {
+              "time": "2:30 PM",
+              "activity": "Musée Picasso Visit",
+              "description": "Delve into the world of Pablo Picasso at the Musée Picasso, housed in a beautiful 17th-century mansion. Discover his vast body of work across various periods.",
+              "cost": 14,
+              "location": "Musée Picasso"
+            },
+            {
+              "time": "5:00 PM",
+              "activity": "Marais Gallery Stroll & Place des Vosges",
+              "description": "Spend the late afternoon wandering through the art galleries and unique boutiques of Le Marais. Relax at the beautiful Place des Vosges, Paris's oldest planned square.",
+              "cost": 0,
+              "location": "Le Marais District"
+            },
+            {
+              "time": "7:30 PM",
+              "activity": "Dinner near Canal Saint-Martin",
+              "description": "Discover the trendy area around Canal Saint-Martin for dinner, known for its relaxed atmosphere and independent restaurants.",
+              "cost": 35,
+              "location": "Canal Saint-Martin Area"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Bohemian Heights & Digital Art Wonders",
+          "activities": [
+            {
+              "time": "9:30 AM",
+              "activity": "Montmartre & Sacré-Cœur Exploration",
+              "description": "Ascend to the artistic district of Montmartre. Visit the stunning Sacré-Cœur Basilica, enjoy the panoramic views of Paris, and wander through Place du Tertre where artists work.",
+              "cost": 0,
+              "location": "Montmartre & Sacré-Cœur"
+            },
+            {
+              "time": "12:30 PM",
+              "activity": "Lunch in Montmartre",
+              "description": "Savor a traditional French crêpe or a casual meal at one of Montmartre's charming eateries.",
+              "cost": 18,
+              "location": "Montmartre"
+            },
+            {
+              "time": "3:00 PM",
+              "activity": "Atelier des Lumières Immersive Art",
+              "description": "Experience a unique and captivating immersive digital art exhibition at Atelier des Lumières. Book your tickets well in advance as it's very popular.",
+              "cost": 17,
+              "location": "Atelier des Lumières"
+            },
+            {
+              "time": "7:30 PM",
+              "activity": "Dinner in Pigalle",
+              "description": "Enjoy dinner in the lively Pigalle district, just below Montmartre, known for its vibrant nightlife and diverse restaurant scene.",
+              "cost": 35,
+              "location": "Pigalle District"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Rodin's Passion, History & Latin Quarter Charm",
+          "activities": [
+            {
+              "time": "9:30 AM",
+              "activity": "Musée Rodin & Gardens",
+              "description": "Visit the elegant Musée Rodin, dedicated to the works of sculptor Auguste Rodin. Admire 'The Thinker' and 'The Kiss' amidst the beautiful sculpture garden.",
+              "cost": 14,
+              "location": "Musée Rodin"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Les Invalides (Musée de l'Armée)",
+              "description": "Explore Les Invalides, home to the Musée de l'Armée (Army Museum) and Napoleon's Tomb. It offers a deep dive into French military history and impressive architecture.",
+              "cost": 15,
+              "location": "Les Invalides"
+            },
+            {
+              "time": "2:30 PM",
+              "activity": "Lunch & Latin Quarter Stroll",
+              "description": "Enjoy lunch in the historic Latin Quarter, then explore its academic atmosphere, iconic bookstores like Shakespeare and Company, and sights like the Panthéon.",
+              "cost": 25,
+              "location": "Latin Quarter"
+            },
+            {
+              "time": "4:30 PM",
+              "activity": "Luxembourg Gardens Relaxation",
+              "description": "Relax and people-watch in the beautiful Luxembourg Gardens, a perfect spot for an afternoon break.",
+              "cost": 0,
+              "location": "Luxembourg Gardens"
+            },
+            {
+              "time": "7:30 PM",
+              "activity": "Evening Classical Concert (Optional)",
+              "description": "If available and within budget, attend a classical music concert in one of Paris's historic churches or concert halls for a truly immersive cultural experience.",
+              "cost": 50,
+              "location": "Various venues (e.g., Sainte-Chapelle, Église Saint-Germain-des-Prés)"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Royal Opulence at Versailles",
+          "activities": [
+            {
+              "time": "9:00 AM",
+              "activity": "Day Trip to Palace of Versailles",
+              "description": "Take the RER C train for a day trip to the magnificent Palace of Versailles. Explore the opulent State Apartments, the iconic Hall of Mirrors, and the stunning gardens.",
+              "cost": 21,
+              "location": "Palace of Versailles"
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Lunch at Versailles or Garden Picnic",
+              "description": "Have lunch at one of the cafes within the Versailles estate or pack a picnic to enjoy in the vast gardens.",
+              "cost": 20,
+              "location": "Versailles Gardens or Estate"
+            },
+            {
+              "time": "2:30 PM",
+              "activity": "Explore Marie Antoinette's Estate & Trianons",
+              "description": "Wander through Marie Antoinette's picturesque Hamlet and the Grand and Petit Trianons, offering a more intimate glimpse into royal life.",
+              "cost": 0,
+              "location": "Marie Antoinette's Estate, Versailles"
+            },
+            {
+              "time": "6:00 PM",
+              "activity": "Return to Paris",
+              "description": "Take the RER C back to Paris. This day involves a lot of walking, so plan for some rest.",
+              "cost": 15,
+              "location": "Versailles to Paris (RER C train)"
+            },
+            {
+              "time": "8:00 PM",
+              "activity": "Relaxed Dinner in your Neighborhood",
+              "description": "Enjoy a simple, relaxed dinner at a local restaurant or cafe near your accommodation after a long day of exploration.",
+              "cost": 30,
+              "location": "Your Hotel Neighborhood"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Hidden Gems & Parisian Farewell",
+          "activities": [
+            {
+              "time": "10:00 AM",
+              "activity": "Petit Palais (Musée des Beaux-Arts de la Ville de Paris)",
+              "description": "Visit the exquisite Petit Palais, a free museum housing the City of Paris's fine arts collection. Its architecture and garden courtyard are also highlights. It's a true hidden gem.",
+              "cost": 0,
+              "location": "Petit Palais"
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Musée Jacquemart-André",
+              "description": "Step into the luxurious world of the Musée Jacquemart-André, a beautifully preserved 19th-century mansion housing an impressive private art collection. This offers a glimpse into Parisian aristocratic life.",
+              "cost": 16,
+              "location": "Musée Jacquemart-André"
+            },
+            {
+              "time": "2:00 PM",
+              "activity": "Farewell Parisian Lunch",
+              "description": "Enjoy a final memorable French lunch at a charming brasserie, savoring classic dishes and the Parisian ambiance.",
+              "cost": 30,
+              "location": "Central Paris"
+            },
+            {
+              "time": "4:00 PM",
+              "activity": "Last-Minute Souvenirs & Departure Prep",
+              "description": "Do some last-minute souvenir shopping or revisit a favorite spot. Head back to your hotel to collect your luggage and prepare for departure.",
+              "cost": 0,
+              "location": "Various"
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Purchase a Navigo Découverte weekly pass (valid Mon-Sun) for unlimited metro/bus travel if your trip aligns, or a Carnet of 10 tickets for flexibility.",
+        "Book popular museum tickets (Louvre, Orsay, Atelier des Lumières) online and in advance to secure timed entry slots and avoid long queues.",
+        "Consider the Paris Museum Pass if you plan to visit many museums not covered by individual tickets. However, this itinerary often features a mix, so individual tickets might be more cost-effective.",
+        "Embrace local boulangeries for delicious and affordable breakfasts and lunches (sandwiches, quiches, pastries).",
+        "Walk as much as possible to discover hidden streets and architectural details, and bring comfortable shoes.",
+        "Learn a few basic French phrases (hello, goodbye, please, thank you, excuse me) – locals appreciate the effort.",
+        "Stay hydrated and carry a reusable water bottle; public fountains (fontaines Wallace) are available."
+      ],
+      "totalCost": 1900,
+      "isMock": false
+    },
+    "estimatedCost": 1900,
+    "isPublic": false,
+    "naturalLanguagePrompt": "Plan a 7-day trip to Paris under €2000, solo traveler, art and museums",
+    "selectedOption": "C",
+    "optionName": "Luxury Art Immersion",
+    "currency": "EUR",
+    "month": "Spring/Fall (e.g., April, May, September, October) for pleasant weather and fewer crowds than summer",
+    "travelWith": "Solo",
+    "budgetSpent": 0,
+    "likes": [],
+    "commentsCount": 0,
+    "admin": "69cbb3d1bf67f91f119101ab",
+    "members": [
+      {
+        "userId": "69cbb3d1bf67f91f119101ab",
+        "role": "admin",
+        "joinedAt": "2026-03-31T15:37:35.175Z"
+      }
+    ],
+    "isOpenToJoin": true,
+    "maxMembers": 20,
+    "inviteToken": "708fb2ac-0758-4486-82f4-5f27fc34584e",
+    "location": {
+      "lat": 48.8588897,
+      "lng": 2.320041,
+      "address": "Paris, Île-de-France, France métropolitaine, France"
+    },
+    "expenses": [],
+    "chatHistory": [],
+    "joinRequests": [],
+    "createdAt": "2026-03-31T15:37:35.179Z",
+    "__v": 0
+  },
+  {
+    "_id": "69cbf20299096fcac6b813e0",
+    "userId": "69cbb3d1bf67f91f119101ab",
+    "title": "4-Day Coastal Comfort Trip to Goa",
+    "city": "Goa",
+    "days": 4,
+    "interests": [
+      "food"
+    ],
+    "prompt": "Plan a 4-day trip to Goa under ₹20,000, adventure and beaches, couple trip",
+    "itinerary": {
+      "days": [
+        {
+          "day": 1,
+          "title": "Arrival, Anjuna's Bohemian Charm & Vagator Sunset",
+          "activities": [
+            {
+              "time": "11:00 AM",
+              "activity": "Arrive in Goa & Check-in",
+              "description": "Arrive at Goa Airport (GOI) or Madgaon/Vasco Railway Station. Take a pre-booked taxi or local bus to your budget-friendly accommodation in North Goa (e.g., Anjuna/Vagator area). Check in and freshen up.",
+              "cost": 0,
+              "location": "Anjuna Beach area",
+              "coordinates": {
+                "lat": 15.5869,
+                "lng": 73.7437
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Scooter Rental & Local Lunch",
+              "description": "Rent a scooter (₹350-₹400/day) for convenient travel. Have a traditional Goan thali or fresh seafood at a local eatery.",
+              "cost": 800,
+              "location": "Anjuna Market area",
+              "coordinates": {
+                "lat": 15.5878,
+                "lng": 73.741
+              }
+            },
+            {
+              "time": "3:00 PM",
+              "activity": "Relax at Anjuna Beach",
+              "description": "Spend a relaxed afternoon soaking up the sun, swimming, or simply enjoying the laid-back vibe of Anjuna Beach. If it's Wednesday, explore the famous Flea Market.",
+              "cost": 0,
+              "location": "Anjuna Beach",
+              "coordinates": {
+                "lat": 15.5841,
+                "lng": 73.7419
+              }
+            },
+            {
+              "time": "6:00 PM",
+              "activity": "Sunset at Vagator Beach",
+              "description": "Head to Vagator Beach for a breathtaking sunset view, often considered one of the most picturesque in North Goa. Take photos and enjoy the romantic ambiance.",
+              "cost": 0,
+              "location": "Vagator Beach",
+              "coordinates": {
+                "lat": 15.6025,
+                "lng": 73.7279
+              }
+            },
+            {
+              "time": "8:00 PM",
+              "activity": "Dinner at a Beach Shack",
+              "description": "Enjoy a candlelit dinner at one of the cozy beach shacks on Vagator or Ozran Beach, savoring fresh seafood and Goan delicacies.",
+              "cost": 1000,
+              "location": "Ozran Beach Shacks",
+              "coordinates": {
+                "lat": 15.6015,
+                "lng": 73.7291
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Thrilling Water Sports & Historic Fort Views",
+          "activities": [
+            {
+              "time": "9:00 AM",
+              "activity": "Water Sports at Calangute Beach",
+              "description": "Head to Calangute or Baga Beach, known for exciting water sports. Indulge in parasailing, jet skiing, or a banana boat ride (look for combo packages for better deals for a couple).",
+              "cost": 3000,
+              "location": "Calangute Beach",
+              "coordinates": {
+                "lat": 15.5491,
+                "lng": 73.757
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Lunch at a Beachside Restaurant",
+              "description": "Enjoy a hearty lunch at a popular beachside restaurant in Calangute, recharging after your adventurous morning.",
+              "cost": 800,
+              "location": "Calangute Main Road",
+              "coordinates": {
+                "lat": 15.5435,
+                "lng": 73.7601
+              }
+            },
+            {
+              "time": "3:00 PM",
+              "activity": "Explore Fort Aguada",
+              "description": "Drive to Fort Aguada, a 17th-century Portuguese fort offering panoramic views of the Arabian Sea and the confluence of the Mandovi River. Explore the lighthouse and the historic structure.",
+              "cost": 0,
+              "location": "Fort Aguada",
+              "coordinates": {
+                "lat": 15.4851,
+                "lng": 73.7749
+              }
+            },
+            {
+              "time": "6:00 PM",
+              "activity": "Sunset at Candolim Beach",
+              "description": "Witness another beautiful Goan sunset at Candolim Beach, a quieter alternative to the bustling Baga/Calangute, often with fewer crowds.",
+              "cost": 0,
+              "location": "Candolim Beach",
+              "coordinates": {
+                "lat": 15.5097,
+                "lng": 73.7719
+              }
+            },
+            {
+              "time": "8:00 PM",
+              "activity": "Dinner & Live Music",
+              "description": "Enjoy dinner at a restaurant in Candolim or your base area, perhaps with some live music or a relaxed ambiance.",
+              "cost": 1200,
+              "location": "Candolim Main Road",
+              "coordinates": {
+                "lat": 15.5118,
+                "lng": 73.7748
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "South Goa Serenity & Spice Plantation",
+          "activities": [
+            {
+              "time": "9:00 AM",
+              "activity": "Drive to South Goa Beaches",
+              "description": "Embark on a scenic scooter ride south to experience the serene beaches of South Goa. Aim for Palolem Beach.",
+              "cost": 200,
+              "location": "Towards Palolem Beach",
+              "coordinates": {
+                "lat": 15.2,
+                "lng": 73.8
+              }
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Relax at Palolem Beach",
+              "description": "Spend time at Palolem Beach, known for its crescent shape, calm waters, and picturesque surroundings. You can sunbathe, swim, or take a short kayak ride.",
+              "cost": 0,
+              "location": "Palolem Beach",
+              "coordinates": {
+                "lat": 15.0093,
+                "lng": 73.9926
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Lunch at Agonda Beach",
+              "description": "Drive a short distance to Agonda Beach, a quieter and more pristine beach. Enjoy a peaceful lunch at a shack overlooking the sea.",
+              "cost": 800,
+              "location": "Agonda Beach",
+              "coordinates": {
+                "lat": 15.0506,
+                "lng": 73.9918
+              }
+            },
+            {
+              "time": "3:30 PM",
+              "activity": "Spice Plantation Tour",
+              "description": "Head inland for an immersive tour of a Spice Plantation (e.g., Sahakari Spice Farm). Learn about various spices, their cultivation, and traditional Goan lunch options (included in some tours).",
+              "cost": 1000,
+              "location": "Sahakari Spice Farm",
+              "coordinates": {
+                "lat": 15.3941,
+                "lng": 74.0416
+              }
+            },
+            {
+              "time": "7:00 PM",
+              "activity": "Return to North Goa & Dinner",
+              "description": "Drive back to your North Goa accommodation. Have a relaxed dinner at a local restaurant, perhaps trying different Goan curries.",
+              "cost": 1000,
+              "location": "Anjuna/Vagator area",
+              "coordinates": {
+                "lat": 15.5869,
+                "lng": 73.7437
+              }
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Old Goa Heritage & Departure",
+          "activities": [
+            {
+              "time": "9:30 AM",
+              "activity": "Explore Old Goa Churches",
+              "description": "Visit the UNESCO World Heritage site of Old Goa. Explore the majestic Basilica of Bom Jesus (housing St. Francis Xavier's relics) and the grand Se Cathedral, remnants of Goa's colonial past.",
+              "cost": 0,
+              "location": "Old Goa",
+              "coordinates": {
+                "lat": 15.5002,
+                "lng": 73.9213
+              }
+            },
+            {
+              "time": "12:00 PM",
+              "activity": "Lunch in Panjim",
+              "description": "Drive to Panjim, Goa's capital. Enjoy lunch at a traditional Goan restaurant or a local cafe. You can take a quick stroll through Fontainhas, the Latin Quarter, if time permits.",
+              "cost": 800,
+              "location": "Panjim, Fontainhas",
+              "coordinates": {
+                "lat": 15.4989,
+                "lng": 73.8278
+              }
+            },
+            {
+              "time": "2:00 PM",
+              "activity": "Last Minute Shopping or Beach Visit",
+              "description": "Depending on your departure schedule, either do some last-minute souvenir shopping (e.g., local handicrafts, spices) or have a final relaxing hour at a nearby beach.",
+              "cost": 500,
+              "location": "Mapusa Market (if Friday) or any convenient beach",
+              "coordinates": {
+                "lat": 15.5908,
+                "lng": 73.8043
+              }
+            },
+            {
+              "time": "4:00 PM",
+              "activity": "Return Scooter & Head to Departure Point",
+              "description": "Return your rented scooter. Collect your luggage and head to Goa Airport or the railway station for your departure, reminiscing about your Goan adventure.",
+              "cost": 0,
+              "location": "Anjuna/Vagator area to Airport/Station",
+              "coordinates": {
+                "lat": 15.5869,
+                "lng": 73.7437
+              }
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "Rent a scooter for mobility; it's the most economical and flexible way to explore Goa. Always wear a helmet and carry your driving license.",
+        "Stay hydrated, especially during the day. Carry a reusable water bottle.",
+        "Bargain politely at markets for better deals.",
+        "Always apply sunscreen and wear sunglasses/hat to protect yourself from the strong sun.",
+        "Book your accommodation in advance, especially during peak season, to get budget-friendly options. Look for guesthouses or homestays.",
+        "Try local Goan cuisine at shacks and smaller restaurants for authentic and affordable meals.",
+        "Keep some cash handy, as not all vendors accept digital payments, especially in remote areas or beach shacks."
+      ],
+      "totalCost": 15800,
+      "isMock": false
+    },
+    "estimatedCost": 15800,
+    "isPublic": false,
+    "naturalLanguagePrompt": "Plan a 4-day trip to Goa under ₹20,000, adventure and beaches, couple trip",
+    "selectedOption": "B",
+    "optionName": "Coastal Comfort",
+    "currency": "INR",
+    "month": "October or March (shoulder seasons, ideal for budget-conscious travel with pleasant weather)",
+    "travelWith": "Couple",
+    "budgetSpent": 0,
+    "likes": [],
+    "commentsCount": 0,
+    "admin": "69cbb3d1bf67f91f119101ab",
+    "members": [
+      {
+        "userId": "69cbb3d1bf67f91f119101ab",
+        "role": "admin",
+        "joinedAt": "2026-03-31T16:10:42.670Z"
+      }
+    ],
+    "isOpenToJoin": false,
+    "maxMembers": 20,
+    "inviteToken": "4191f42a-e279-4842-8a5e-45f8c3a7933d",
+    "location": {
+      "lat": 15.3004543,
+      "lng": 74.0855134,
+      "address": "Goa, India"
+    },
+    "expenses": [],
+    "chatHistory": [],
+    "joinRequests": [],
+    "createdAt": "2026-03-31T16:10:42.672Z",
+    "__v": 0,
+    "packingList": {
+      "categories": [
+        {
+          "name": "Essentials",
+          "icon": "🎒",
+          "items": [
+            "ID (Passport/Aadhar/Driving License)",
+            "Tickets & Bookings (digital or print)",
+            "Cash (INR) & Credit/Debit Cards",
+            "Smartphone",
+            "Phone Charger & Power Bank",
+            "Small Daypack/Backpack",
+            "Hand Sanitizer",
+            "Reusable Water Bottle"
+          ]
+        },
+        {
+          "name": "Clothing",
+          "icon": "👕",
+          "items": [
+            "4-5 T-shirts/Light Tops (cotton/linen)",
+            "2-3 Pairs of Shorts/Skirts/Light Trousers",
+            "1-2 Swimsuits/Trunks",
+            "1-2 Beach Cover-ups/Sarongs",
+            "Underwear (4-5 pairs)",
+            "Light Jacket/Cardigan (for cooler evenings or AC)",
+            "Pajamas/Sleepwear"
+          ]
+        },
+        {
+          "name": "Footwear",
+          "icon": "👟",
+          "items": [
+            "Flip-flops/Sandals (for beach and casual wear)",
+            "Comfortable Walking Shoes (for exploring markets and towns)"
+          ]
+        },
+        {
+          "name": "Toiletries & Health",
+          "icon": "🧴",
+          "items": [
+            "Toothbrush & Toothpaste",
+            "Shampoo & Body Wash (travel size)",
+            "Moisturizer",
+            "Sunscreen (high SPF)",
+            "Insect Repellent",
+            "Lip Balm with SPF",
+            "Personal Medications (if any)",
+            "Basic First-Aid Kit (band-aids, pain relievers)"
+          ]
+        },
+        {
+          "name": "Beach & Sun",
+          "icon": "🏖️",
+          "items": [
+            "Sunglasses",
+            "Wide-brimmed Hat/Cap",
+            "Beach Towel (quick-dry, if not provided by accommodation)"
+          ]
+        },
+        {
+          "name": "Foodie Gear",
+          "icon": "🍽️",
+          "items": [
+            "Reusable Shopping Bag (for market visits, local produce, or souvenirs)",
+            "Wet Wipes (for pre/post street food cleanup)",
+            "Small Container (for potential leftovers from local eateries)"
+          ]
+        },
+        {
+          "name": "Tech & Entertainment",
+          "icon": "🔌",
+          "items": [
+            "Headphones",
+            "Book/E-reader (for relaxation)",
+            "Camera & Accessories (optional, for capturing food and sights)"
+          ]
+        }
+      ],
+      "isMock": false
+    }
+  },
+  {
+    "_id": "69cc041f9350a427b97e8942",
+    "userId": "69cbb3d1bf67f91f119101ab",
+    "title": "5-Day Luxury Indulgence Trip to Japan (Tokyo focus)",
+    "city": "Japan (Tokyo focus)",
+    "days": 5,
+    "interests": [
+      "food"
+    ],
+    "prompt": "Plan a 5-day trip to Japan, budget $1500, food and anime, with friends, in October",
+    "itinerary": {
+      "days": [
+        {
+          "day": 1,
+          "title": "Arrival & Shinjuku's Neon Grandeur",
+          "activities": [
+            {
+              "time": "3:00 PM",
+              "activity": "Hotel Check-in & Relaxation",
+              "description": "Arrive in Tokyo, transfer to your hotel, and check in. Take some time to freshen up and relax after your journey. For a 'luxury indulgence' on a budget, choose a well-located boutique hotel or a comfortable room in a 4-star property.",
+              "cost": 0,
+              "location": "Your Hotel in Tokyo",
+              "coordinates": {
+                "lat": 35.6895,
+                "lng": 139.6917
+              }
+            },
+            {
+              "time": "5:00 PM",
+              "activity": "Tokyo Metropolitan Government Building Views",
+              "description": "Head to the Tokyo Metropolitan Government Building for panoramic, free views of the city. On a clear day, you might even spot Mount Fuji. It's an excellent way to grasp the sheer scale of Tokyo at dusk.",
+              "cost": 0,
+              "location": "Tokyo Metropolitan Government Building",
+              "coordinates": {
+                "lat": 35.6897,
+                "lng": 139.692
+              }
+            },
+            {
+              "time": "7:00 PM",
+              "activity": "Shinjuku Evening Exploration & Premium Izakaya",
+              "description": "Immerse yourselves in the vibrant neon-lit streets of Shinjuku. Explore areas like Kabukicho (just for the spectacle) and enjoy a delicious and authentic Japanese dinner at a high-quality Izakaya, sampling various small dishes.",
+              "cost": 50,
+              "location": "Shinjuku, Tokyo",
+              "coordinates": {
+                "lat": 35.69,
+                "lng": 139.7
+              }
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Anime Dreams & Harajuku Trends",
+          "activities": [
+            {
+              "time": "9:00 AM",
+              "activity": "Ghibli Museum Visit",
+              "description": "Journey to Mitaka for the magical Ghibli Museum. Dive into the world of Studio Ghibli's beloved animations, seeing original artwork and exclusive short films. *Booking months in advance is essential.*",
+              "cost": 7,
+              "location": "Ghibli Museum",
+              "coordinates": {
+                "lat": 35.6961,
+                "lng": 139.5704
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Nakano Broadway Anime Heaven",
+              "description": "Explore Nakano Broadway, a multi-story shopping complex famous for its vast collection of anime, manga, figurines, retro games, and various pop culture collectibles. It's an otaku paradise.",
+              "cost": 5,
+              "location": "Nakano Broadway",
+              "coordinates": {
+                "lat": 35.7042,
+                "lng": 139.6644
+              }
+            },
+            {
+              "time": "4:00 PM",
+              "activity": "Harajuku's Quirky Fashion & Meiji Jingu",
+              "description": "Head to Harajuku. Wander down Takeshita Street for quirky fashion and unique snacks. Afterwards, find tranquility at the serene Meiji Jingu Shrine, a stark contrast to Harajuku's bustle.",
+              "cost": 0,
+              "location": "Harajuku & Meiji Jingu Shrine",
+              "coordinates": {
+                "lat": 35.6724,
+                "lng": 139.7032
+              }
+            },
+            {
+              "time": "7:00 PM",
+              "activity": "Themed Cafe Experience",
+              "description": "Indulge in a fun themed dining experience. Harajuku and Shibuya offer many unique cafes, such as character cafes or cute animal cafes (ensure ethical treatment).",
+              "cost": 35,
+              "location": "Themed Cafe (e.g., Kawaii Monster Cafe - if open, or similar)",
+              "coordinates": {
+                "lat": 35.6698,
+                "lng": 139.7045
+              }
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Iconic Shibuya & Ancient Asakusa",
+          "activities": [
+            {
+              "time": "9:30 AM",
+              "activity": "Shibuya Crossing & Hachiko",
+              "description": "Experience the world-famous Shibuya Crossing, observing the organized chaos from above and then joining the flow. Take a photo with the iconic Hachiko statue.",
+              "cost": 0,
+              "location": "Shibuya Crossing",
+              "coordinates": {
+                "lat": 35.6591,
+                "lng": 139.7004
+              }
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Shopping & Exploring Shibuya",
+              "description": "Explore Shibuya's vibrant shopping districts. You can find everything from high-end fashion to trendy streetwear and unique Japanese goods. Visit Shibuya Sky for elevated city views.",
+              "cost": 20,
+              "location": "Shibuya, Tokyo",
+              "coordinates": {
+                "lat": 35.659,
+                "lng": 139.699
+              }
+            },
+            {
+              "time": "2:00 PM",
+              "activity": "Senso-ji Temple & Nakamise-dori",
+              "description": "Travel to Asakusa, Tokyo's oldest temple, Senso-ji. Walk through the bustling Nakamise-dori market, browsing traditional souvenirs and street food before reaching the majestic temple.",
+              "cost": 0,
+              "location": "Senso-ji Temple",
+              "coordinates": {
+                "lat": 35.7147,
+                "lng": 139.7967
+              }
+            },
+            {
+              "time": "6:00 PM",
+              "activity": "Monjayaki Dinner in Asakusa",
+              "description": "Enjoy a unique 'luxury indulgence' culinary experience by trying Monjayaki, a savory pancake cooked at your table. Asakusa is renowned for this local specialty, best enjoyed with friends.",
+              "cost": 40,
+              "location": "Asakusa, Tokyo",
+              "coordinates": {
+                "lat": 35.7118,
+                "lng": 139.7941
+              }
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Akihabara Electric Town & Ginza Elegance",
+          "activities": [
+            {
+              "time": "10:00 AM",
+              "activity": "Akihabara Electric Town Immersion",
+              "description": "Dive into the world of electronics, manga, anime, and gaming in Akihabara. Explore multi-story shops, game centers, and experience the unique atmosphere. You can also walk through a Maid Cafe area.",
+              "cost": 10,
+              "location": "Akihabara, Tokyo",
+              "coordinates": {
+                "lat": 35.6997,
+                "lng": 139.7712
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Ueno Park & Tokyo National Museum",
+              "description": "Relax in Ueno Park, a vast green space home to several museums. Opt for a visit to the Tokyo National Museum to experience Japan's rich history and art, a cultural indulgence.",
+              "cost": 10,
+              "location": "Ueno Park & Tokyo National Museum",
+              "coordinates": {
+                "lat": 35.7148,
+                "lng": 139.7733
+              }
+            },
+            {
+              "time": "4:00 PM",
+              "activity": "Ginza Window Shopping & High-End Department Store",
+              "description": "Stroll through Ginza, Tokyo's premier luxury shopping district. Admire the high-end boutiques and department stores. Explore the food basement (depachika) of a major department store for gourmet delights and unique souvenirs.",
+              "cost": 0,
+              "location": "Ginza, Tokyo",
+              "coordinates": {
+                "lat": 35.672,
+                "lng": 139.7667
+              }
+            },
+            {
+              "time": "7:00 PM",
+              "activity": "Michelin-Rated (Bib Gourmand) Dining Experience",
+              "description": "For a 'luxury indulgence' that fits the budget, seek out a Bib Gourmand restaurant in Ginza or a nearby area. These offer excellent quality food at more reasonable prices than starred restaurants.",
+              "cost": 60,
+              "location": "Ginza / nearby Bib Gourmand restaurant",
+              "coordinates": {
+                "lat": 35.6698,
+                "lng": 139.766
+              }
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Tsukiji Market Delights & Departure",
+          "activities": [
+            {
+              "time": "8:30 AM",
+              "activity": "Tsukiji Outer Market Food Exploration",
+              "description": "Start your day with a visit to Tsukiji Outer Market. Enjoy a fresh seafood breakfast, sample local street food, and browse the lively stalls for unique culinary souvenirs.",
+              "cost": 30,
+              "location": "Tsukiji Outer Market",
+              "coordinates": {
+                "lat": 35.6661,
+                "lng": 139.769
+              }
+            },
+            {
+              "time": "11:00 AM",
+              "activity": "Imperial Palace East Garden",
+              "description": "Take a tranquil walk through the Imperial Palace East Garden, the former site of Edo Castle. It's a beautiful, free escape with historical significance.",
+              "cost": 0,
+              "location": "Imperial Palace East Garden",
+              "coordinates": {
+                "lat": 35.6865,
+                "lng": 139.7559
+              }
+            },
+            {
+              "time": "1:00 PM",
+              "activity": "Last-Minute Souvenir Shopping",
+              "description": "Depending on your flight schedule, dedicate some time for last-minute souvenir shopping or revisit a favorite spot for one final indulgence.",
+              "cost": 30,
+              "location": "Tokyo Station Area or Shinjuku",
+              "coordinates": {
+                "lat": 35.6812,
+                "lng": 139.7671
+              }
+            },
+            {
+              "time": "3:00 PM",
+              "activity": "Departure from Tokyo",
+              "description": "Head to Narita (NRT) or Haneda (HND) Airport for your departure, carrying wonderful memories of your Tokyo adventure.",
+              "cost": 0,
+              "location": "Tokyo Airport",
+              "coordinates": {
+                "lat": 35.5494,
+                "lng": 139.7798
+              }
+            }
+          ]
+        }
+      ],
+      "tips": [
+        "The '$1500 budget for Luxury Indulgence' is challenging for Tokyo. This itinerary assumes $1000-$1200 per person for *on-ground expenses only* (food, transport, activities, some accommodation) and *excludes international flights*. True luxury hotels and dining would significantly exceed this.",
+        "October weather in Tokyo is generally pleasant, mild, and often sunny. Pack layers: light jacket or cardigan, long-sleeved shirts, and comfortable walking shoes. An umbrella is always recommended.",
+        "Public transportation (trains and subways) is incredibly efficient. Purchase a Suica or Pasmo IC card upon arrival for seamless travel. Google Maps is essential for navigation.",
+        "Book the Ghibli Museum tickets *at least 2-3 months in advance*, as they sell out very quickly. Tickets are not available at the museum.",
+        "While Japan is increasingly cashless, having some Yen cash is advisable for smaller shops, street vendors, and some restaurants, especially outside major tourist hubs.",
+        "Politeness is highly valued. Be mindful of noise levels on public transport, queuing etiquette, and do not tip in Japan (it can be considered rude)."
+      ],
+      "totalCost": 1150,
+      "budgetBreakdown": {
+        "food": 280,
+        "transport": 70,
+        "accommodation": 400,
+        "activities": 220,
+        "misc": 180
+      },
+      "packingList": {
+        "categories": [
+          {
+            "name": "Essentials",
+            "icon": "🎒",
+            "items": [
+              "Passport & Visa (if required)",
+              "Travel adapter (Type A/B)",
+              "Portable power bank",
+              "Comfortable walking shoes (multiple pairs)",
+              "Small umbrella or rain jacket",
+              "Daypack/small backpack"
+            ]
+          },
+          {
+            "name": "Clothing (October)",
+            "icon": "👕",
+            "items": [
+              "Light jacket or cardigan",
+              "Long-sleeved shirts & t-shirts (layers)",
+              "Comfortable pants/jeans",
+              "Stylish outfit for evening dining",
+              "Socks & underwear"
+            ]
+          },
+          {
+            "name": "Health & Personal Care",
+            "icon": "💊",
+            "items": [
+              "Any personal medications",
+              "Basic first-aid kit",
+              "Hand sanitizer",
+              "Sunscreen",
+              "Lip balm"
+            ]
+          },
+          {
+            "name": "Tech & Entertainment",
+            "icon": "📱",
+            "items": [
+              "Smartphone & charger",
+              "Camera & extra memory card",
+              "Headphones",
+              "Travel pillow (for long flights/trains)"
+            ]
+          }
+        ]
+      },
+      "bookingOptions": [
+        {
+          "type": "flight",
+          "provider": "Skyscanner",
+          "link": "https://www.skyscanner.com/transport/flights-to-japan",
+          "description": "Find the best flights to Tokyo (Narita NRT or Haneda HND) from your location. Remember to book well in advance for October travel.",
+          "priceHint": "From $800+"
+        },
+        {
+          "type": "hotel",
+          "provider": "Booking.com",
+          "link": "https://www.booking.com/city/jp/tokyo.html",
+          "description": "Secure a comfortable and well-located boutique hotel or 3-4 star accommodation in areas like Shinjuku, Shibuya, or Ginza to maximize your Tokyo experience within budget.",
+          "priceHint": "From $90/night (per person, twin share)"
+        },
+        {
+          "type": "activity",
+          "provider": "Ghibli Museum Official Site",
+          "link": "https://www.ghibli-museum.jp/en/tickets/",
+          "description": "Book your Ghibli Museum tickets precisely when they become available (usually 10th of the previous month). They sell out instantly.",
+          "priceHint": "$7 (approx)"
+        },
+        {
+          "type": "transport",
+          "provider": "Japan Rail Pass / Suica/Pasmo",
+          "link": "https://www.jreast.co.jp/e/pass/suica.html",
+          "description": "For convenient travel within Tokyo, purchase a Suica or Pasmo IC card upon arrival at any major station. No need for a JR Pass for a Tokyo-focused trip.",
+          "priceHint": "Initial charge ~ $15-20"
+        }
+      ],
+      "isMock": false
+    },
+    "estimatedCost": 1150,
+    "isPublic": false,
+    "naturalLanguagePrompt": "Plan a 5-day trip to Japan, budget $1500, food and anime, with friends, in October",
+    "selectedOption": "C",
+    "optionName": "Luxury Indulgence",
+    "currency": "USD",
+    "month": "October",
+    "travelWith": "Friends",
+    "packingList": {
+      "categories": [
+        {
+          "name": "Essentials",
+          "icon": "🎒",
+          "items": [
+            "Passport & Visa (if required)",
+            "Travel adapter (Type A/B)",
+            "Portable power bank",
+            "Comfortable walking shoes (multiple pairs)",
+            "Small umbrella or rain jacket",
+            "Daypack/small backpack"
+          ]
+        },
+        {
+          "name": "Clothing (October)",
+          "icon": "👕",
+          "items": [
+            "Light jacket or cardigan",
+            "Long-sleeved shirts & t-shirts (layers)",
+            "Comfortable pants/jeans",
+            "Stylish outfit for evening dining",
+            "Socks & underwear"
+          ]
+        },
+        {
+          "name": "Health & Personal Care",
+          "icon": "💊",
+          "items": [
+            "Any personal medications",
+            "Basic first-aid kit",
+            "Hand sanitizer",
+            "Sunscreen",
+            "Lip balm"
+          ]
+        },
+        {
+          "name": "Tech & Entertainment",
+          "icon": "📱",
+          "items": [
+            "Smartphone & charger",
+            "Camera & extra memory card",
+            "Headphones",
+            "Travel pillow (for long flights/trains)"
+          ]
+        }
+      ]
+    },
+    "budgetSpent": 0,
+    "likes": [],
+    "commentsCount": 0,
+    "admin": "69cbb3d1bf67f91f119101ab",
+    "members": [
+      {
+        "userId": "69cbb3d1bf67f91f119101ab",
+        "role": "admin",
+        "joinedAt": "2026-03-31T17:27:59.808Z"
+      }
+    ],
+    "isOpenToJoin": false,
+    "maxMembers": 20,
+    "inviteToken": "f2589c77-c46e-41b4-b08d-efd72f6a47fe",
+    "location": {
+      "lat": 35.7047584,
+      "lng": 139.7899643,
+      "address": "Focus Kuramae, 2, 蔵前四丁目, 蔵前, 台東区, 東京都, 111-0051, 日本"
+    },
+    "expenses": [],
+    "chatHistory": [],
+    "joinRequests": [],
+    "createdAt": "2026-03-31T17:27:59.809Z",
+    "__v": 0
+  }
+]

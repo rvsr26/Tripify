@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "69cbb3d1bf67f91f119101ab",
+    "name": "fvgh",
+    "email": "abc@gmail.com",
+    "passwordHash": "$2a$10$eSyGHsrVqZ.mJ/PaOw40SeFWSOXEbj16UYUflmyN843OYew4xeofK",
+    "role": "user",
+    "preferences": [
+      "food"
+    ],
+    "createdAt": "2026-03-31T11:45:21.826Z",
+    "__v": 1,
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWNiYjNkMWJmNjdmOTFmMTE5MTAxYWIiLCJpYXQiOjE3NzUxMzM5NTIsImV4cCI6MTc3NTczODc1Mn0.g1iBfPsQ5OoB-tGmhcLU9vGkxp_gB3KfTGn12n50VhY",
+    "bio": "",
+    "username": "fvgh_popn"
+  }
+]
