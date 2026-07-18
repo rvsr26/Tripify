@@ -1,6 +1,6 @@
-# 🌍 Tripify Enterprise
+# 🌍 Tripify-A travel Experience
 
-Welcome to **Tripify Enterprise**, a next-generation AI-powered travel ecosystem. This project combines a high-performance backend, a modern web frontend, and a feature-rich mobile application to provide a seamless travel experience.
+Welcome to **Tripify**, a next-generation AI-powered travel ecosystem. This project combines a high-performance backend, a modern web frontend, and a feature-rich mobile application to provide a seamless travel experience.
 
 ## 🚀 Projects Included
 
