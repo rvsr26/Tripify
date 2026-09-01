@@ -28,6 +28,8 @@ import CuratedPlansScreen from './pages/CuratedPlansScreen';
 import CuratedTripDetail from './pages/CuratedTripDetail';
 import CollaborativeAtlas from './pages/CollaborativeAtlas';
 import TravelChatbot from './components/TravelChatbot';
+import JudgeModePanel from './components/JudgeModePanel';
+import McpDeveloperConsole from './components/McpDeveloperConsole';
 
 // ── Theme Hook ──
 function useTheme() {
@@ -123,6 +125,8 @@ function AppInner() {
   const [pendingCount, setPendingCount] = useState(0);
   const { theme, toggleTheme } = useTheme();
   const [showLaunchpad, setShowLaunchpad] = useState(false);
+  const [showMcpConsole, setShowMcpConsole] = useState(false);
+  const [judgeModeEnabled, setJudgeModeEnabled] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -197,6 +201,9 @@ function AppInner() {
                   </div>
                </div>
                <div className="header-actions">
+                  <button className="btn btn-sm btn-outline" onClick={() => setShowMcpConsole(true)} style={{ fontSize: '0.78rem', borderColor: '#38bdf8', color: '#38bdf8' }}>
+                    📡 MCP Console
+                  </button>
                   <button className="header-btn" onClick={toggleTheme} title="Toggle Theme">
                     {theme === 'dark' ? '☀️' : '🌙'}
                   </button>
@@ -252,6 +259,9 @@ function AppInner() {
             </Routes>
 
             <TravelChatbot user={user} />
+
+            {judgeModeEnabled && <JudgeModePanel />}
+            {showMcpConsole && <McpDeveloperConsole onClose={() => setShowMcpConsole(false)} />}
           </main>
         </div>
       ) : (

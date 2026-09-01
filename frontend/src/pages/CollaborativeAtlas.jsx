@@ -27,7 +27,7 @@ export default function CollaborativeAtlas({ user }) {
     });
 
     // 2. Init Socket
-    const s = io(SOCKET_URL);
+    const s = io(SOCKET_URL, { auth: { token: localStorage.getItem('accessToken') } });
     setSocket(s);
 
     s.emit('join', tripId);

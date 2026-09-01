@@ -5,6 +5,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import html2canvas from 'html2canvas';
 import { io } from 'socket.io-client';
+import EmergencyPanel from '../components/EmergencyPanel';
+
 
 // ── Sub-components ───────────────────────────────────────────────────────────
 function MembersTab({ trip, currentUserId, onUpdate }) {
@@ -1855,7 +1857,9 @@ export default function TripDetailScreen({ currentUserId }) {
   const [activeTab, setActiveTab] = useState('Plan');
   const [activeDay, setActiveDay] = useState(0);
   const [showRecap, setShowRecap] = useState(false);
+  const [showEmergency, setShowEmergency] = useState(false);
   const socketRef = useRef(null);
+
 
   useEffect(() => {
     plannerService.getTripById(id)
@@ -1875,12 +1879,12 @@ export default function TripDetailScreen({ currentUserId }) {
   useEffect(() => {
     if (!trip || !trip._id) return;
     const socketUrl = import.meta.env.VITE_SOCKET_URL || (window.location.hostname === 'localhost' ? 'http://localhost:4000' : '/_/backend');
-    socketRef.current = io(socketUrl);
+    socketRef.current = io(socketUrl, { auth: { token: localStorage.getItem('accessToken') } });
     socketRef.current.emit('join', trip._id);
 
-    socketRef.current.on('tripUpdated', (updatedTrip) => {
-      if (data.senderId !== currentUserId) {
-        setTrip(updatedTrip);
+    socketRef.current.on('tripUpdated', (data) => {
+      if (data && data.senderId !== currentUserId && data.trip) {
+        setTrip(data.trip);
       }
     });
 
@@ -1958,6 +1962,14 @@ export default function TripDetailScreen({ currentUserId }) {
                 >
                   🎬 Recap
                 </button>
+                <button 
+                  className="btn btn-primary btn-sm" 
+                  style={{ background: 'linear-gradient(135deg, #dc2626, #ef4444)', border: 'none', boxShadow: '0 0 15px rgba(239, 68, 68, 0.4)' }}
+                  onClick={() => setShowEmergency(true)}
+                >
+                  🆘 Emergency AI
+                </button>
+
               </div>
             </div>
           </div>
@@ -2147,6 +2159,11 @@ export default function TripDetailScreen({ currentUserId }) {
         {activeTab === 'Reviews' && <ReviewsTab trip={trip} />}
         {activeTab === 'Settings' && isAdmin && <SettingsTab trip={trip} onUpdate={setTrip} />}
       </div>
+
+      {showEmergency && (
+        <EmergencyPanel tripId={trip._id} onClose={() => setShowEmergency(false)} />
+      )}
     </div>
   );
 }
+

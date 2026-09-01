@@ -1,8 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { plannerService } from '../api';
 import CuratedPlansScreen from './CuratedPlansScreen';
 import MyTripsScreen from './MyTripsScreen';
+import { useStream } from '../hooks/useStream';
+import VoiceInput from '../components/VoiceInput';
+import AgentActivityPanel from '../components/AgentActivityPanel';
+
+const API_BASE = import.meta.env.VITE_API_URL ||
+  (window.location.hostname === 'localhost' ? 'http://localhost:4000/api' : '/_/backend/api');
+
 
 const EXAMPLE_PROMPTS = [
   'Plan a 5-day trip to Japan, budget $1500, food and anime, with friends, in October',
@@ -106,6 +113,18 @@ export default function PlannerScreen() {
   const [activeTab, setActiveTab]   = useState('Wizard');
   const textareaRef = useRef(null);
   const navigate    = useNavigate();
+  const { events, isStreaming, agentLog, startStream } = useStream();
+
+  // ── Voice transcript handler ─────────────────────────────────────────────
+  const handleVoiceTranscript = useCallback((transcript) => {
+    setPrompt(transcript);
+    // Auto-submit after voice input
+    setTimeout(() => {
+      if (transcript.trim().length > 5) {
+        document.getElementById('planner-submit-btn')?.click();
+      }
+    }, 500);
+  }, []);
 
   const handleGenerateOptions = async (e) => {
     e.preventDefault();
@@ -134,24 +153,78 @@ export default function PlannerScreen() {
     setLoadingKey(optionKey);
     setStep(3);
     try {
-      const { plan } = await plannerService.selectPlan(optionKey, optionData, parsedData, prompt);
-      navigate(`/trips/${plan._id}`);
+      // Start SSE stream session first
+      let sessionId = null;
+      try {
+        sessionId = await startStream();
+      } catch { /* non-fatal — fall back to silent mode */ }
+
+      // Trigger orchestrator (async — streams progress via SSE)
+      if (sessionId) {
+        const token = localStorage.getItem('accessToken');
+        fetch(`${API_BASE}/orchestrate/plan`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({ optionKey, optionData, parsedData, prompt, sessionId }),
+        }).catch(() => {});
+
+        // Watch SSE events for the final tripId
+        // The 'done' event from the orchestrator contains the tripId
+      } else {
+        // Fallback: use existing plannerService (no streaming)
+        const { plan } = await plannerService.selectPlan(optionKey, optionData, parsedData, prompt);
+        navigate(`/trips/${plan._id}`);
+        return;
+      }
     } catch (err) {
       setStep(2);
       setLoadingKey(null);
     }
   };
 
-  // Step 3 — Loading
+  // Watch for orchestrator completion in stream events
+  React.useEffect(() => {
+    const doneEvent = events.find(e => e.type === 'done' && e.summary?.tripId);
+    if (doneEvent?.summary?.tripId) {
+      navigate(`/trips/${doneEvent.summary.tripId}`);
+    }
+    // Also handle options_ready (for voice flow)
+    const optionsEvent = events.find(e => e.type === 'options_ready');
+    if (optionsEvent?.options && step === 1) {
+      setOptions(optionsEvent.options);
+      setParsed({ destination: optionsEvent.options.destination, days: optionsEvent.options.days, currency: '$' });
+      setStep(2);
+      setLoadingOpts(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [events]);
+
+
+  // Step 3 — Streaming Agent Panel (replaces old spinner)
   if (step === 3) return (
-    <div className="container animate-fade-in" style={{ textAlign: 'center', paddingTop: '12vh' }}>
-      <div className="loading-spinner" style={{ width: '48px', height: '48px', marginBottom: '28px' }} />
-      <h2 style={{ marginBottom: '10px' }}>Gemini is building your itinerary...</h2>
-      <p style={{ color: 'var(--text-muted)', maxWidth: '440px', margin: '0 auto' }}>
-        Crafting a custom map, packing list, and day-by-day plan. This takes about 10 seconds.
+    <div className="container animate-fade-in" style={{ textAlign: 'center', paddingTop: '6vh' }}>
+      <h2 style={{ marginBottom: '6px' }}>🤖 Building Your Itinerary</h2>
+      <p style={{ color: 'var(--text-muted)', marginBottom: '28px', maxWidth: '440px', margin: '0 auto 28px' }}>
+        Tripify's AI agents are working together to craft your perfect trip.
       </p>
+      <AgentActivityPanel
+        events={events}
+        agentLog={agentLog}
+        isStreaming={isStreaming || loadingKey !== null}
+        style={{ maxWidth: '700px', margin: '0 auto 28px' }}
+      />
+      {/* Fallback: if streaming not working, show old spinner */}
+      {events.length === 0 && (
+        <div style={{ marginTop: '24px' }}>
+          <div className="loading-spinner" style={{ width: '36px', height: '36px', margin: '0 auto 16px' }} />
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+            Gemini is crafting your day-by-day plan...
+          </p>
+        </div>
+      )}
     </div>
   );
+
 
   return (
     <div className="container animate-fade-in">
@@ -183,6 +256,7 @@ export default function PlannerScreen() {
             <label style={{ fontSize: '1rem', marginBottom: '14px', fontWeight: 700, color: 'var(--text-primary)' }}>
               What's your dream trip? 🌍
             </label>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
             <textarea
               className="input-field"
               ref={textareaRef}
@@ -190,18 +264,21 @@ export default function PlannerScreen() {
               placeholder="e.g. Plan a 10-day trip to Japan for $5000, focusing on anime, street food, and nature..."
               value={prompt}
               onChange={e => { setPrompt(e.target.value); setError(''); }}
-              style={{ fontSize: '1rem', lineHeight: 1.7, padding: '18px' }}
+              style={{ fontSize: '1rem', lineHeight: 1.7, padding: '18px', flex: 1 }}
             />
+            <VoiceInput onTranscript={handleVoiceTranscript} disabled={loadingOpts} />
+          </div>
           </div>
           {error && <p style={{ color: 'var(--brand-rose)', marginBottom: '16px', fontSize: '0.88rem' }}>{error}</p>}
 
-          <button className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={loadingOpts}>
+          <button id="planner-submit-btn" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={loadingOpts}>
             {loadingOpts ? (
               <><span className="loading-spinner-sm" /> Analyzing your trip...</>
             ) : (
               '✨ Generate Trip Options'
             )}
           </button>
+
 
           <div style={{ marginTop: '28px', borderTop: '1px solid var(--border-default)', paddingTop: '20px' }}>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', marginBottom: '12px', fontWeight: 600 }}>

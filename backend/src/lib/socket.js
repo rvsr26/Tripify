@@ -1,7 +1,23 @@
+import jwt from 'jsonwebtoken';
+
 export function initSocket(io) {
+  // Socket.io JWT authentication middleware
+  io.use((socket, next) => {
+    const token = socket.handshake.auth?.token || socket.handshake.query?.token;
+    if (token) {
+      try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        socket.userId = decoded.sub;
+      } catch (err) {
+        console.warn(`[Socket Auth Warning] Invalid token from ${socket.id}`);
+      }
+    }
+    next();
+  });
+
   io.on('connection', socket => {
-    console.log('socket connected', socket.id);
-    
+    console.log('socket connected', socket.id, socket.userId ? `(user: ${socket.userId})` : '(guest)');
+
     socket.on('join', room => { 
       socket.join(room); 
       console.log(`Socket ${socket.id} joined room ${room}`);

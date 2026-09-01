@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { authService } from '../api';
 import { GoogleLogin } from '@react-oauth/google';
 
@@ -28,6 +29,26 @@ export default function AuthScreen({ onAuth }) {
     }
   };
 
+  const handleDemoLogin = async () => {
+    setLoading(true);
+    setError('');
+    const demoEmail = 'demo@tripify.app';
+    const demoPass  = 'TripifyDemo2026!';
+    try {
+      try {
+        const data = await authService.login(demoEmail, demoPass);
+        onAuth(data.user, data.accessToken);
+      } catch {
+        const data = await authService.register('Demo Explorer', demoEmail, demoPass);
+        onAuth(data.user, data.accessToken);
+      }
+    } catch (err) {
+      setError('Demo login error: ' + (err.message || 'Could not auto-login'));
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleGoogleSuccess = async (response) => {
     setLoading(true);
     setError('');
@@ -43,44 +64,77 @@ export default function AuthScreen({ onAuth }) {
 
   const quotes = [
     { text: "Traveling – it leaves you speechless, then turns you into a storyteller.", author: "Ibn Battuta" },
-    { text: "The world is a book and those who do not travel read only one page.", author: "St. Augustine" },
-    { text: "Adventure is worthwhile.", author: "Aesop" }
+    { text: "The world is a book and those who do not travel read only one page.", author: "St. Augustine" }
   ];
 
   return (
     <div className="auth-page">
+      <div className="ultra-mesh-bg" />
+
       {/* ── Left Panel: Cinematic Visuals ──────────────────────────────── */}
       <div className="auth-side-panel">
-        <img src="/images/auth_bg.png" alt="Travel Background" className="auth-side-bg" />
-        <div className="hero-overlay" style={{ background: 'linear-gradient(to right, rgba(6,6,14,0.7) 0%, rgba(6,6,14,0.1) 100%)' }} />
+        <img src="/hero_showcase.png" alt="Travel Showcase" className="auth-side-bg" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&q=80&w=1200"; }} />
+        <div className="auth-side-overlay" />
         
         <div className="auth-side-content">
-          <div className="auth-side-logo">Tripify</div>
-          <div className="animate-slide-up">
-            <h1 className="auth-quote">"{quotes[isLogin ? 0 : 1].text}"</h1>
-            <p style={{ opacity: 0.6, fontSize: '1rem', letterSpacing: '1px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Link to="/" style={{ color: '#fbbf24', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              ← Back to Tripify
+            </Link>
+            <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'white' }}>✨ Tripify</div>
+          </div>
+
+          <div>
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              padding: '6px 14px', borderRadius: '99px', background: 'rgba(245,158,11,0.2)',
+              color: '#fbbf24', fontSize: '0.75rem', fontWeight: 800, marginBottom: '14px',
+              border: '1px solid rgba(245,158,11,0.4)',
+            }}>
+              MCP NATIVE AUTONOMOUS AI OS
+            </div>
+            <h1 className="auth-quote" style={{ fontSize: '2rem', fontWeight: 800, color: 'white', lineHeight: 1.3, marginBottom: '12px' }}>
+              "{quotes[isLogin ? 0 : 1].text}"
+            </h1>
+            <p style={{ color: '#94a3b8', fontSize: '0.95rem', fontWeight: 600 }}>
               — {quotes[isLogin ? 0 : 1].author}
             </p>
+
+            <div style={{ display: 'flex', gap: '10px', marginTop: '24px' }}>
+              <span style={{ background: 'rgba(255,255,255,0.1)', padding: '6px 12px', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700 }}>⚡ 23 MCP Tools</span>
+              <span style={{ background: 'rgba(255,255,255,0.1)', padding: '6px 12px', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700 }}>🧠 Memory Graph</span>
+              <span style={{ background: 'rgba(255,255,255,0.1)', padding: '6px 12px', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700 }}>🏃 Digital Twin</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* ── Right Panel: Auth Form ────────────────────────────────────── */}
       <div className="auth-form-panel">
-        <div className="auth-glass-card animate-fade-in">
-          <div style={{ marginBottom: '32px' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '8px' }}>
-              {isLogin ? 'Welcome back' : 'Start your journey'}
+        <div className="auth-glass-card">
+          {/* Tab Group */}
+          <div className="auth-tab-group">
+            <button className={`auth-tab ${isLogin ? 'active' : ''}`} onClick={() => { setIsLogin(true); setError(''); }}>
+              Sign In
+            </button>
+            <button className={`auth-tab ${!isLogin ? 'active' : ''}`} onClick={() => { setIsLogin(false); setError(''); }}>
+              Create Account
+            </button>
+          </div>
+
+          <div style={{ marginBottom: '24px' }}>
+            <h2 style={{ fontSize: '1.6rem', fontWeight: 900, color: 'white', marginBottom: '6px' }}>
+              {isLogin ? 'Welcome Back' : 'Start Your Journey'}
             </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              {isLogin ? 'Enter your details to access your trips.' : 'Create an account to start planning.'}
+            <p style={{ color: '#94a3b8', fontSize: '0.85rem' }}>
+              {isLogin ? 'Enter your credentials to access your trips.' : 'Create an account to start AI planning.'}
             </p>
           </div>
 
           {error && (
             <div className="auth-error-box">
               <span>⚠️</span>
-              {error}
+              <span>{error}</span>
             </div>
           )}
 
@@ -90,7 +144,7 @@ export default function AuthScreen({ onAuth }) {
                 <label>Full Name</label>
                 <input
                   className="input-field"
-                  placeholder="Your Name"
+                  placeholder="e.g. Vishnu"
                   value={name}
                   onChange={e => setName(e.target.value)}
                   required
@@ -110,10 +164,9 @@ export default function AuthScreen({ onAuth }) {
               />
             </div>
 
-            <div className="auth-input-wrapper" style={{ marginBottom: '24px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                 <label style={{ marginBottom: 0 }}>Password</label>
-                 {isLogin && <button type="button" className="auth-toggle-btn" style={{ fontSize: '0.75rem', fontWeight: 500 }}>Forgot?</button>}
+            <div className="auth-input-wrapper">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <label>Password</label>
               </div>
               <input
                 type="password"
@@ -126,20 +179,23 @@ export default function AuthScreen({ onAuth }) {
             </div>
 
             <button
-              className="btn btn-primary btn-lg"
-              style={{ width: '100%', padding: '14px' }}
+              type="submit"
+              className="auth-btn-submit"
               disabled={loading}
             >
-              {loading ? (
-                <><span className="loading-spinner-sm" /> Loading...</>
-              ) : (
-                isLogin ? 'Sign In' : 'Create Account'
-              )}
+              {loading ? 'Authenticating...' : (isLogin ? 'Sign In' : 'Create Account')}
             </button>
           </form>
 
-          <div className="auth-divider">
-            <span>or continue with</span>
+          {/* Quick Demo Access Button */}
+          <button type="button" className="auth-demo-btn" onClick={handleDemoLogin} disabled={loading}>
+            ⚡ Demo Quick-Login (1-Click Instant Access)
+          </button>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '20px 0' }}>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.1)' }} />
+            <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 600 }}>or continue with</span>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.1)' }} />
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -153,13 +209,6 @@ export default function AuthScreen({ onAuth }) {
                 width="350"
               />
             </div>
-          </div>
-
-          <div className="auth-footer">
-            {isLogin ? "New to Tripify? " : "Already have an account? "}
-            <button className="auth-toggle-btn" onClick={() => { setIsLogin(!isLogin); setError(''); }}>
-              {isLogin ? 'Create one now' : 'Sign in here'}
-            </button>
           </div>
         </div>
       </div>

@@ -20,15 +20,68 @@ import swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs';
 import { initFirebase } from './services/firebase.js';
 
+// ── MCP Layer ──
+import { createMcpServer }       from './mcp/server.js';
+import { registerMcpTransports } from './mcp/transport.js';
+import { mcpAuthMiddleware }     from './mcp/auth.js';
+
+// ── Streaming + Orchestrator ──
+import streamRouter       from './routes/stream.js';
+import orchestratorRouter from './routes/orchestrator.js';
+
+// ── Security + Performance ──
+import rateLimit from 'express-rate-limit';
+import { applySecurityHeaders } from './middlewares/security.js';
+import { appCache } from './lib/cache.js';
+
 const app = express();
 const httpServer = createServer(app);
-const io = new IOServer(httpServer, { cors:{ origin: '*' }});
 
-app.use(helmet());
-app.use(cors());
-app.use(express.json({ limit: '1mb' }));
+// Allow configurable CORS origin for Railway + Vercel split deployment
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,http://localhost:3000').split(',').map(s => s.trim());
+const io = new IOServer(httpServer, {
+  cors: { origin: allowedOrigins, methods: ['GET', 'POST'], credentials: true },
+});
+
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+    cb(new Error(`CORS: ${origin} not allowed`));
+  },
+  credentials: true,
+}));
+app.use(express.json({ limit: '2mb' }));
 app.use(morgan('dev'));
 app.use(socketMiddleware(io));
+
+// ── Global Rate Limiter (lenient — per-route limits added below) ──
+const globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 500,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests, please slow down.' },
+});
+app.use('/api', globalLimiter);
+
+// ── Auth Rate Limiter (strict) ──
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  message: { error: 'Too many auth attempts.' },
+});
+app.use('/api/auth', authLimiter);
+
+// ── AI Rate Limiter (cost protection) ──
+const aiLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: parseInt(process.env.AI_RATE_LIMIT || '30'),
+  message: { error: 'AI rate limit reached. Please wait before generating another trip.' },
+});
+app.use('/api/planner/options', aiLimiter);
+app.use('/api/planner/select',  aiLimiter);
+app.use('/api/mcp',             aiLimiter);
 
 // Swagger
 try {
@@ -39,8 +92,37 @@ try {
   console.error('❌ Failed to load Swagger:', err.message);
 }
 
-// Routes
+import { connectDB } from './lib/db.js';
+
+// ── Vercel Route Prefix Normalizer ──
+app.use((req, res, next) => {
+  if (req.url.startsWith('/_/backend')) {
+    req.url = req.url.replace('/_/backend', '');
+  }
+  next();
+});
+
+// ── Database Connection Middleware ──
+app.use(async (req, res, next) => {
+  if (req.path.startsWith('/api') || req.url.startsWith('/api')) {
+    try { await connectDB(); } catch { /* ignore */ }
+  }
+  next();
+});
+
+// ── Existing REST API routes (unchanged) ──
 app.use('/api', apiRouter);
+
+// ── Streaming (SSE) Orchestrator route ──
+app.use('/api/stream', streamRouter);
+app.use('/api/orchestrate', orchestratorRouter);
+
+// ── MCP Routes ──
+app.use('/api', mcpAuthMiddleware); // attach mcpUserId to req
+const mcpRouter = express.Router();
+const mcpServer = createMcpServer();
+registerMcpTransports(mcpRouter, mcpServer);
+app.use('/api', mcpRouter);
 
 // Health & Diagnostics
 app.get('/api/health', (req,res)=> res.json({status:'ok', env: process.env.NODE_ENV || 'dev'}));
@@ -101,3 +183,5 @@ start().catch(err => {
 
 // Export the app for Vercel
 export default app;
+// trigger nodemon restart
+// trigger nodemon restart 2

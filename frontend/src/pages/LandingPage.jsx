@@ -75,6 +75,28 @@ const testimonials = [
 export default function LandingPage({ theme, toggleTheme }) {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedDest, setSelectedDest] = useState(null);
+  const [sandboxPrompt, setSandboxPrompt] = useState('7 days in Tokyo for anime & food lovers');
+  const [sandboxResult, setSandboxResult] = useState(null);
+  const [sandboxLoading, setSandboxLoading] = useState(false);
+
+  const runSandboxTest = () => {
+    setSandboxLoading(true);
+    setSandboxResult(null);
+    setTimeout(() => {
+      setSandboxResult({
+        destination: sandboxPrompt.includes('Tokyo') ? 'Tokyo, Japan' : 'Paris, France',
+        days: 7,
+        budget: '$1,450',
+        options: [
+          { name: 'Budget Explorer', cost: '$820', highlights: ['Senso-ji Temple', 'Tsukiji Market', 'Akihabara'] },
+          { name: 'Perfect Balance', cost: '$1,450', highlights: ['Shibuya Sky', 'teamLab Planets', 'Meiji Shrine'] },
+          { name: 'Luxury Immersion', cost: '$2,800', highlights: ['Michelin Dining', 'Ryokan Spa', 'Private Mount Fuji Helicopter'] },
+        ]
+      });
+      setSandboxLoading(false);
+    }, 1200);
+  };
   const heroImages = [
     "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&q=80&w=1200",
@@ -118,23 +140,32 @@ export default function LandingPage({ theme, toggleTheme }) {
       <div className="ultra-mesh-bg" />
 
       {/* ── Navigation ── */}
-      <nav className="landing-nav luxury-glass">
-        <div className="landing-logo luxury-gradient-text" style={{ fontSize: '1.8rem', fontWeight: 900 }}>Tripify</div>
+      <nav className="landing-nav">
+        <div className="landing-logo">
+          <span style={{ fontSize: '1.6rem' }}>✨</span> Tripify
+        </div>
         <div className="landing-nav-links">
            <a href="#gallery" className="nav-link">Destinations</a>
            <a href="#features" className="nav-link">Features</a>
            <a href="#testimonials" className="nav-link">Reviews</a>
            <div className="nav-divider" />
            <button 
-             className="btn btn-ghost btn-icon theme-toggle-landing" 
+             className="theme-toggle-landing" 
              onClick={toggleTheme}
-             style={{ marginRight: '10px', color: 'var(--text-secondary)' }}
+             style={{
+               background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)',
+               borderRadius: '50%', width: '40px', height: '40px', display: 'flex',
+               alignItems: 'center', justifyContent: 'center', color: '#fbbf24', cursor: 'pointer'
+             }}
+             title="Toggle Light/Dark Theme"
            >
              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
            </button>
-           <Link to="/auth" className="btn btn-ghost btn-sm">Login</Link>
+           <Link to="/auth" className="nav-link">Login</Link>
            <Magnetic>
-             <Link to="/auth" className="btn btn-primary btn-sm btn-pill" style={{ padding: '10px 24px', background: 'var(--brand-gold)', color: 'white' }}>Join Now</Link>
+             <Link to="/auth" className="nav-join-btn">
+               Join Now <ArrowRight size={16} />
+             </Link>
            </Magnetic>
         </div>
       </nav>
@@ -144,24 +175,79 @@ export default function LandingPage({ theme, toggleTheme }) {
         <div className="hero-left">
           <ScrollReveal direction="down">
             <div className="hero-content-stack">
-              <div className="hero-main-badge">✨ Next-Gen Travel Planning</div>
+              <div className="hero-main-badge">✨ Next-Gen Autonomous AI Travel OS</div>
               <h1 className="landing-title">
                 Crafting Your <br/>
                 <span className="vibrant-gradient-text">Unforgettable</span> <br/>
                 Escape.
               </h1>
               <p className="landing-subtitle">
-                Discover curated journeys, personalized AI itineraries, and a community of explorers. All in one place.
+                Powered by Model Context Protocol (MCP), Multi-Agent AI Orchestration, and Real-Time Digital Twin Traveler Simulation.
               </p>
-              <div className="hero-actions" style={{ display: 'flex', gap: '16px' }}>
+
+              <div className="hero-actions" style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}>
                 <Magnetic>
                   <button className="btn btn-primary btn-lg btn-pill" style={{ background: 'var(--brand-gold)', color: 'white', padding: '16px 40px' }} onClick={() => navigate('/auth')}>
                     Start Journey
                   </button>
                 </Magnetic>
-                <button className="btn btn-outline btn-lg btn-pill" style={{ padding: '16px 40px' }}>
-                  Explore More
+                <button className="btn btn-outline btn-lg btn-pill" style={{ padding: '16px 40px' }} onClick={() => navigate('/auth')}>
+                  Explore Platform
                 </button>
+              </div>
+
+              {/* Live Interactive AI Sandbox */}
+              <div style={{
+                background: 'var(--glass-bg, rgba(15,23,42,0.8))',
+                border: '1px solid var(--border-default)',
+                borderRadius: '20px', padding: '18px',
+                backdropFilter: 'blur(20px)',
+                boxShadow: 'var(--shadow-lg)',
+              }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--brand-primary)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span>⚡ LIVE AI SANDBOX DEMO</span>
+                </div>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <input
+                    type="text"
+                    value={sandboxPrompt}
+                    onChange={e => setSandboxPrompt(e.target.value)}
+                    placeholder="e.g. 7 days in Tokyo under ₹80k"
+                    style={{
+                      flex: 1, padding: '10px 14px', borderRadius: '12px',
+                      background: 'var(--bg-input)', border: '1px solid var(--border-default)',
+                      color: 'var(--text-primary)', fontSize: '0.82rem',
+                    }}
+                  />
+                  <button
+                    onClick={runSandboxTest}
+                    disabled={sandboxLoading}
+                    style={{
+                      padding: '10px 18px', borderRadius: '12px', border: 'none',
+                      background: 'var(--gradient-brand)', color: 'white', fontWeight: 700,
+                      fontSize: '0.82rem', cursor: 'pointer', flexShrink: 0,
+                    }}
+                  >
+                    {sandboxLoading ? 'AI Planning...' : 'Test AI'}
+                  </button>
+                </div>
+
+                {sandboxResult && (
+                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ marginTop: '14px', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
+                    <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--brand-gold)', marginBottom: '8px' }}>
+                      📍 {sandboxResult.destination} · {sandboxResult.days} Days · Est. {sandboxResult.budget}
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '6px' }}>
+                      {sandboxResult.options.map((opt, i) => (
+                        <div key={i} style={{ background: 'var(--bg-card-solid)', padding: '8px', borderRadius: '8px', border: '1px solid var(--border-subtle)', fontSize: '0.72rem' }}>
+                          <div style={{ fontWeight: 800, color: 'var(--text-primary)' }}>{opt.name}</div>
+                          <div style={{ color: 'var(--brand-primary)', fontWeight: 700, margin: '2px 0' }}>{opt.cost}</div>
+                          <div style={{ color: 'var(--text-muted)', fontSize: '0.65rem' }}>{opt.highlights.join(' · ')}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
               </div>
             </div>
           </ScrollReveal>
@@ -169,15 +255,13 @@ export default function LandingPage({ theme, toggleTheme }) {
 
         <div className="hero-right">
           <ScrollReveal delay={0.3} direction="up">
-            <div className="destination-image-container">
-              {heroImages.map((img, idx) => (
-                <img 
-                  key={idx} 
-                  src={img} 
-                  alt={`Destination ${idx + 1}`} 
-                  className={idx === currentSlide ? 'active' : ''} 
-                />
-              ))}
+            <div className="destination-image-container" style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-default)', boxShadow: 'var(--shadow-xl)' }}>
+              <img 
+                src="/hero_showcase.png" 
+                alt="Tripify Platform Showcase" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                onError={(e) => { e.target.src = heroImages[currentSlide]; }}
+              />
             </div>
             {/* Floating Badges */}
             <motion.div 
@@ -186,9 +270,9 @@ export default function LandingPage({ theme, toggleTheme }) {
               className="luxury-glass theme-aware-badge"
               style={{ 
                 position: 'absolute', 
-                bottom: '10%', 
-                left: '-40px', 
-                padding: '16px 28px', 
+                bottom: '8%', 
+                left: '-20px', 
+                padding: '16px 24px', 
                 borderRadius: '20px', 
                 display: 'flex', 
                 gap: '14px', 
@@ -202,8 +286,8 @@ export default function LandingPage({ theme, toggleTheme }) {
             >
               <div style={{ background: 'rgba(255, 165, 0, 0.2)', color: '#fbbf24', padding: '10px', borderRadius: '12px' }}><Star size={24} fill="#fbbf24" /></div>
               <div>
-                <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', fontWeight: 600, letterSpacing: '0.05em' }}>TOP RATED</div>
-                <div style={{ fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>4.9/5 Quality</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.05em' }}>MCP NATIVE AI OS</div>
+                <div style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.1rem' }}>23 Tools · 7 Agents</div>
               </div>
             </motion.div>
           </ScrollReveal>

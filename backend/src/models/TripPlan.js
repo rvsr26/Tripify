@@ -85,4 +85,10 @@ const TripPlanSchema = new mongoose.Schema({
   createdAt:             { type: Date, default: Date.now }
 });
 
+// Database indexes for fast querying
+TripPlanSchema.index({ 'members.userId': 1 });
+TripPlanSchema.index({ userId: 1 });
+TripPlanSchema.index({ city: 1 });
+TripPlanSchema.index({ isPublic: 1, createdAt: -1 });
+
 export default mongoose.model('TripPlan', TripPlanSchema);
