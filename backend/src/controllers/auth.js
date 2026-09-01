@@ -181,7 +181,7 @@ export async function googleLogin(req, res) {
   } catch (e) {
     console.error('Google Login Error:', e);
     // Explicitly return a message so frontend doesn't just get a blank 500
-    res.status(500).json({ error: 'Internal server error or invalid token' });
+    res.status(401).json({ error: 'Internal server error or invalid token: ' + e.message });
   }
 }
 
