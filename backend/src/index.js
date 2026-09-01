@@ -38,7 +38,7 @@ const app = express();
 const httpServer = createServer(app);
 
 // Allow configurable CORS origin for Railway + Vercel split deployment
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,http://localhost:3000').split(',').map(s => s.trim());
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,http://localhost:3000,https://tripify-lyart.vercel.app').split(',').map(s => s.trim());
 const io = new IOServer(httpServer, {
   cors: { origin: allowedOrigins, methods: ['GET', 'POST'], credentials: true },
 });
