@@ -140,12 +140,19 @@ export async function googleLogin(req, res) {
     const { credential } = req.body;
     if (!credential) return res.status(400).json({ error: 'credential (ID Token) required' });
 
+    if (!process.env.GOOGLE_CLIENT_ID) {
+      console.error('Google Login Error: GOOGLE_CLIENT_ID is not set in environment.');
+      return res.status(500).json({ error: 'Server misconfiguration: Google Auth not set up.' });
+    }
+
     const ticket = await client.verifyIdToken({
       idToken: credential,
       audience: process.env.GOOGLE_CLIENT_ID
     });
     const payload = ticket.getPayload();
     const { sub: googleId, email, name, picture } = payload;
+
+    await connectDB();
 
     let user = await User.findOne({ $or: [{ googleId }, { email }] });
     if (!user) {
@@ -163,7 +170,9 @@ export async function googleLogin(req, res) {
     }
 
     const { accessToken, refreshToken } = generateTokens(user);
-    await User.findByIdAndUpdate(user._id, { refreshToken });
+    if (user._id && typeof user._id !== 'string') {
+      try { await User.findByIdAndUpdate(user._id, { refreshToken }); } catch { /* ignore */ }
+    }
 
     res.json({
       user: { id: user._id, email: user.email, name: user.name, role: user.role, username: user.username, picture },
@@ -171,7 +180,8 @@ export async function googleLogin(req, res) {
     });
   } catch (e) {
     console.error('Google Login Error:', e);
-    res.status(401).json({ error: 'Invalid Google token' });
+    // Explicitly return a message so frontend doesn't just get a blank 500
+    res.status(500).json({ error: 'Internal server error or invalid token' });
   }
 }
 
